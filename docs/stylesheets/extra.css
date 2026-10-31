@@ -24,13 +24,17 @@ body,
 }
 
 .md-typeset {
-    font-size: 1.125rem;
-    line-height: 1.9;
+    font-size: 1.0625rem; /* 17px at the default 16px root size */
+    line-height: 1.85;
 }
 
+/* Justify Persian prose so paragraph lines use the available width. */
 .md-typeset p,
-.md-typeset li {
-    line-height: 1.9;
+.md-typeset li > p,
+.md-typeset blockquote {
+    line-height: 1.85;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .md-typeset h1 {
