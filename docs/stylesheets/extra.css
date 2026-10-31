@@ -1,0 +1,56 @@
+
+/* Persian and RTL support */
+
+html {
+    direction: rtl;
+}
+
+body {
+    text-align: right;
+}
+
+/* Main content */
+.md-content {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Navigation */
+.md-sidebar {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Headings and paragraphs */
+.md-content h1,
+.md-content h2,
+.md-content h3,
+.md-content p,
+.md-content li {
+    text-align: right;
+}
+
+/* Lists */
+.md-content ul,
+.md-content ol {
+    padding-right: 1.5rem;
+    padding-left: 0;
+}
+
+/* Code should remain left-to-right */
+.md-content pre,
+.md-content code {
+    direction: ltr;
+    text-align: left;
+}
+
+/* Tables */
+.md-content table {
+    direction: rtl;
+}
+
+/* English text and technical identifiers */
+.md-content code,
+.md-content pre {
+    unicode-bidi: isolate;
+}
