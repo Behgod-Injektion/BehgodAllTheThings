@@ -24,7 +24,7 @@ body,
 }
 
 .md-typeset {
-    font-size: 1.0625rem; /* 17px at the default 16px root size */
+    font-size: 0.85rem; /* 17px at the default 16px root size */
     line-height: 1.85;
 }
 
