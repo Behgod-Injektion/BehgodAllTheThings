@@ -1,23 +1,33 @@
-# Computer Fundamentals
+# مبانی کامپیوتر (Computer Fundamentals)
 
-Before learning cybersecurity, we need to understand
-the computer itself.
+برای یادگیری اصولی علوم کامپیوتر و امنیت سایبری، ابتدا باید خود کامپیوتر و سازوکارهای پایه آن را بشناسیم.
 
-This section introduces the fundamental concepts behind
-modern computing systems.
+در این بخش با نحوه نمایش اطلاعات، اجزای سخت‌افزاری، پردازنده، حافظه و مسیر اجرای برنامه‌ها آشنا می‌شویم. این مفاهیم پیش‌نیاز موضوعاتی مانند معماری کامپیوتر، سیستم‌عامل، مهندسی معکوس و توسعه اکسپلویت هستند.
 
-## Topics
+## موضوعات این بخش
 
-- What Is a Computer?
-- How Computers Represent Data
-- Binary and Hexadecimal
-- Computer Hardware
-- CPU Architecture
-- Memory and Storage
-- How Programs Execute
-- Introduction to Machine Code
+1. کامپیوتر چیست؟ (What Is a Computer?)
+2. داده و اطلاعات (Data and Information)
+3. سیستم‌های عددی (Number Systems)
+4. نمایش دودویی و شانزده‌شانزدهی (Binary and Hexadecimal)
+5. نمایش داده در کامپیوتر (Data Representation)
+6. اجزای سخت‌افزاری کامپیوتر (Computer Hardware)
+7. مبانی پردازنده (CPU Fundamentals)
+8. حافظه و ذخیره‌سازی (Memory and Storage)
+9. نحوه اجرای برنامه‌ها (How Programs Execute)
+10. آشنایی با کد ماشین (Introduction to Machine Code)
 
-## Goal
+## هدف یادگیری
 
-Understand how computers represent, store, process,
-and execute information.
+پس از مطالعه این بخش باید بتوانید توضیح دهید:
+
+- کامپیوتر چگونه داده را نمایش و پردازش می‌کند.
+- تفاوت بیت، بایت و واحدهای رایج اندازه‌گیری داده چیست.
+- CPU، حافظه و ذخیره‌سازی چه نقشی در اجرای برنامه دارند.
+- یک برنامه در سطح کلی چگونه به دستورهای قابل اجرا تبدیل می‌شود.
+
+## پیش‌نیازها
+
+برای شروع این بخش، دانش قبلی در برنامه‌نویسی یا امنیت سایبری لازم نیست. مطالب از مفاهیم پایه آغاز می‌شوند.
+
+> این صفحه نقشه کلی بخش است. درس‌های مستقل، مثال‌ها و تمرین‌های عملی به‌تدریج به آن اضافه خواهند شد.
