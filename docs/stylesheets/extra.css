@@ -1,16 +1,76 @@
 /*
- * Persian layout is handled natively by Zensical:
- * language = "fa" and direction = "rtl" in zensical.toml.
- *
- * Keep code samples and technical identifiers left-to-right.
+ * Estedad Persian typography
+ * Font served by Google Fonts; font software is licensed under SIL OFL 1.1.
+ * Persian layout is handled natively by Zensical (language=fa, direction=rtl).
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Estedad:wght@100..900&display=swap');
+
+:root {
+    --md-text-font: "Estedad", sans-serif;
+    --md-code-font: "Roboto Mono", "Cascadia Code", monospace;
+}
+
+/* Main reading experience */
+body,
+.md-typeset,
+.md-header,
+.md-tabs,
+.md-nav,
+.md-footer,
+.md-search,
+.md-sidebar {
+    font-family: "Estedad", sans-serif;
+}
+
+.md-typeset {
+    font-size: 1.125rem;
+    line-height: 1.9;
+}
+
+.md-typeset p,
+.md-typeset li {
+    line-height: 1.9;
+}
+
+.md-typeset h1 {
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.md-typeset h2 {
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+.md-typeset h3,
+.md-typeset h4 {
+    font-weight: 650;
+    line-height: 1.6;
+}
+
+.md-nav,
+.md-header,
+.md-tabs {
+    font-size: 0.95rem;
+}
+
+/* Keep code samples and technical identifiers left-to-right and monospace. */
 .md-typeset pre,
 .md-typeset pre code,
-.md-typeset code {
+.md-typeset code,
+.md-typeset kbd,
+.md-typeset samp {
+    font-family: "Roboto Mono", "Cascadia Code", monospace;
     direction: ltr;
     text-align: left;
     unicode-bidi: isolate;
+}
+
+.md-typeset pre,
+.md-typeset pre code {
+    font-size: 0.85rem;
+    line-height: 1.65;
 }
 
 .md-typeset .highlight {
