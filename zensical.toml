@@ -31,7 +31,6 @@ features = [
   "content.code.select",
   "content.footnote.tooltips",
   "content.tabs.link",
-  "content.tabs.link",
   "content.tooltips",
   "navigation.footer",
   "navigation.indexes",
