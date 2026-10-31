@@ -1,8 +1,7 @@
 [project]
 site_name = "BehgodAllTheThings"
 site_description = "A free and open-source cybersecurity learning resource, from absolute beginner to advanced security research."
-
-# site_url will be configured when we publish the website.
+site_url = "https://behgod-injektion.github.io/BehgodAllTheThings/"
 
 # copyright = "Copyright &copy; 2026 Your name"
 
@@ -12,6 +11,7 @@ site_description = "A free and open-source cybersecurity learning resource, from
 
 nav = [
   { "Home" = "index.md" },
+  { "Computer Fundamentals" = "01-computer-fundamentals/index.md" },
 ]
 
 # extra_css = ["stylesheets/extra.css"]
