@@ -9,11 +9,11 @@ nav = [
 
     { "Reverse Engineering" = [
         { "Python" = [
-            "reverse-engineering/01-python/01-getting-started.md",
-            "reverse-engineering/01-python/02-operators.md",
-            "reverse-engineering/01-python/03-expressions.md",
-            "reverse-engineering/01-python/04-strings.md",
-            "reverse-engineering/01-python/05-type-conversion-&-debugging.md",
+            { "01-getting-started" = "reverse-engineering/01-python/01-getting-started.md" },
+            { "02-operators" = "reverse-engineering/01-python/02-operators.md" },
+            { "03-expressions" = "reverse-engineering/01-python/03-expressions.md" },
+            { "04-strings" = "reverse-engineering/01-python/04-strings.md" },
+            { "05-type-conversion-&-debugging" = "reverse-engineering/01-python/05-type-conversion-&-debugging.md" },
         ]},
 
         { "C" = [] },
