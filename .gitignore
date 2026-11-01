@@ -14,3 +14,7 @@ __pycache__/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Local Obsidian vaults and settings
+/obsidian/
+/.obsidian/
