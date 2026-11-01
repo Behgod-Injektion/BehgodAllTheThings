@@ -82,22 +82,26 @@ body,
     text-align: left;
 }
 
-/* Center the table block itself, not just the cells inside it. */
-.md-typeset .md-typeset__table {
-    width: fit-content;
-    max-width: 100%;
-    margin-inline: auto;
-    overflow-x: auto;
+/* Center the table wrapper within the full-width scroll container. */
+.md-typeset__scrollwrap {
+    text-align: center;
 }
 
-/* Keep the table at its natural content width and center its cell contents. */
-.md-typeset .md-typeset__table table {
+.md-typeset__scrollwrap .md-typeset__table {
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: auto;
+    vertical-align: top;
+}
+
+/* Preserve natural table sizing and center the text in every cell. */
+.md-typeset__scrollwrap .md-typeset__table table {
     width: auto;
     margin: 0;
 }
 
-.md-typeset .md-typeset__table table th,
-.md-typeset .md-typeset__table table td {
+.md-typeset__scrollwrap .md-typeset__table th,
+.md-typeset__scrollwrap .md-typeset__table td {
     text-align: center !important;
     vertical-align: middle;
 }
