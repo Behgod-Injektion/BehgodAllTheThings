@@ -82,19 +82,8 @@ body,
     text-align: left;
 }
 
-/* Center tables in the reading column while keeping wide tables scrollable. */
-.md-typeset__table {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
-}
-
+/* Center-align tables without changing their layout or width. */
 .md-typeset__table table {
-    display: table;
-    width: max-content;
-    max-width: 100%;
     margin-inline: auto;
 }
 
