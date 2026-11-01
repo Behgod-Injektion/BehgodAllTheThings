@@ -82,7 +82,20 @@ body,
     text-align: left;
 }
 
-/* Center-align table contents (override the RTL theme's right alignment). */
+/* Center the table block itself, not just the cells inside it. */
+.md-typeset .md-typeset__table {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    overflow-x: auto;
+}
+
+/* Keep the table at its natural content width and center its cell contents. */
+.md-typeset .md-typeset__table table {
+    width: auto;
+    margin: 0;
+}
+
 .md-typeset .md-typeset__table table th,
 .md-typeset .md-typeset__table table td {
     text-align: center !important;
