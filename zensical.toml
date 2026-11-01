@@ -5,20 +5,19 @@ site_url = "https://behgod-injektion.github.io/BehgodAllTheThings/"
 extra_css = ["stylesheets/extra.css"]
 
 nav = [
-  { "خانه" = "index.md" },
-  { "مبانی کامپیوتر" = [
-    "01-computer-fundamentals/index.md",
-    { "کامپیوتر چیست؟" = "01-computer-fundamentals/01-what-is-a-computer.md" },
-    { "داده و اطلاعات" = "01-computer-fundamentals/02-data-and-information.md" },
-    { "سیستم‌های عددی" = "01-computer-fundamentals/03-number-systems.md" },
-    { "محاسبات دودویی" = "01-computer-fundamentals/04-binary-arithmetic.md" },
-    { "نمایش داده در کامپیوتر" = "01-computer-fundamentals/05-data-representation.md" },
-    { "اجزای سخت‌افزاری کامپیوتر" = "01-computer-fundamentals/06-computer-hardware.md" },
-    { "مبانی پردازنده" = "01-computer-fundamentals/07-cpu-fundamentals.md" },
-    { "حافظه و ذخیره‌سازی" = "01-computer-fundamentals/08-memory-and-storage.md" },
-    { "نحوه اجرای برنامه‌ها" = "01-computer-fundamentals/09-how-programs-execute.md" },
-    { "آشنایی با کد ماشین" = "01-computer-fundamentals/10-introduction-to-machine-code.md" },
-  ] },
+    { "خانه" = "index.md" },
+
+    { "Reverse Engineering" = [
+        { "Python" = [
+            "reverse-engineering/01-python/01-getting-started.md",
+            "reverse-engineering/01-python/02-operators.md",
+            "reverse-engineering/01-python/03-expressions.md",
+            "reverse-engineering/01-python/04-strings.md",
+            "reverse-engineering/01-python/05-type-conversion-&-debugging.md",
+        ]},
+
+        { "C" = [] },
+    ]},
 ]
 
 [project.theme]

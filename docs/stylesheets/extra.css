@@ -81,3 +81,16 @@ body,
     direction: ltr;
     text-align: left;
 }
+
+/* Center tables on the page */
+.md-typeset__table table {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+.md-typeset__table th,
+.md-typeset__table td {
+    text-align: center;
+    vertical-align: middle;
+}

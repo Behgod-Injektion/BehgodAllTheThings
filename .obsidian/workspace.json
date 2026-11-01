@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/01-computer-fundamentals/01-what-is-a-computer.md",
+                "file": "docs/reverse-engineering/01-python/05-type-conversion-&-debugging.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-what-is-a-computer"
+              "title": "05-type-conversion-&-debugging"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/01-computer-fundamentals/01-what-is-a-computer.md",
+                "file": "docs/reverse-engineering/01-python/05-type-conversion-&-debugging.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/01-computer-fundamentals/01-what-is-a-computer.md",
+                "file": "docs/reverse-engineering/01-python/05-type-conversion-&-debugging.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/01-computer-fundamentals/01-what-is-a-computer.md",
+                "file": "docs/reverse-engineering/01-python/05-type-conversion-&-debugging.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -189,5 +189,28 @@
     }
   },
   "active": "7cb1f15a6d76c4c5",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "docs/reverse-engineering/01-python/04-strings.md",
+    "docs/reverse-engineering/01-python/03-expressions.md",
+    "docs/reverse-engineering/01-python/02-operators.md",
+    "site/reverse-engineering/javascripts/mathjax.js",
+    "site/reverse-engineering/javascripts",
+    "docs/reverse-engineering/javascripts/mathjax.js",
+    "docs/reverse-engineering/javascripts",
+    "docs/reverse-engineering/01-python/01-getting-started.md",
+    "site/reverse-engineering/01-python/05-type-conversion-&-debugging/index.html",
+    "site/reverse-engineering/01-python/04-strings/index.html",
+    "site/reverse-engineering/01-python/03-expressions/index.html",
+    "site/reverse-engineering/01-python/02-operators/index.html",
+    "site/reverse-engineering/01-python/01-getting-started/index.html",
+    "site/reverse-engineering/01-python/05-type-conversion-&-debugging",
+    "docs/reverse-engineering/01-python/05-type-conversion-&-debugging.md",
+    "CURRICULUM.md",
+    "docs/reverse-engineering/02-c/Untitled.md",
+    "docs/reverse-engineering/01-the-motherboards.md",
+    "docs/Untitled.md",
+    "docs/01-computer-fundamentals/01-motherboards.md",
+    "CONTENT-STANDARD.md",
+    "CONTRIBUTING.md"
+  ]
 }
