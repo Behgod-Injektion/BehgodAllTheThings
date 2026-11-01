@@ -82,11 +82,20 @@ body,
     text-align: left;
 }
 
-/* Center tables on the page */
+/* Center tables in the reading column while keeping wide tables scrollable. */
+.md-typeset__table {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
 .md-typeset__table table {
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
+    display: table;
+    width: max-content;
+    max-width: 100%;
+    margin-inline: auto;
 }
 
 .md-typeset__table th,
