@@ -18,19 +18,17 @@
 
 !!! example "Python"
 
-````
-```python
-import math
+    ```python
+    import math
 
-math.sqrt(42 / math.pi)
-```
+    math.sqrt(42 / math.pi)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-3.656366395715726
-```
-````
+    ```text
+    3.656366395715726
+    ```
 
 حالا فرض کن بخواهیم نتیجه را در یک متغیر ذخیره کنیم:
 
@@ -44,33 +42,29 @@ radius = math.sqrt(42 / math.pi)
 
 !!! example "Python"
 
-````
-```python
-radius
-```
+    ```python
+    radius
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-3.656366395715726
-```
-````
+    ```text
+    3.656366395715726
+    ```
 
 حتی می‌توانیم مقدار بازگشتی تابع را مستقیماً در یک Expression استفاده کنیم:
 
 !!! example "Python"
 
-````
-```python
-radius + math.sqrt(42 / math.pi)
-```
+    ```python
+    radius + math.sqrt(42 / math.pi)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-7.312732791431452
-```
-````
+    ```text
+    7.312732791431452
+    ```
 
 حالا بیایید خودمان تابعی بنویسیم که یک مقدار برگرداند.
 
@@ -78,13 +72,11 @@ radius + math.sqrt(42 / math.pi)
 
 !!! example "Python"
 
-````
-```python
-def circle_area(radius):
-    area = math.pi * radius**2
-    return area
-```
-````
+    ```python
+    def circle_area(radius):
+        area = math.pi * radius**2
+        return area
+    ```
 
 تابع `circle_area()` یک Parameter به نام `radius` دریافت می‌کند و با استفاده از آن، مساحت دایره را محاسبه می‌کند.
 
@@ -100,17 +92,15 @@ return area
 
 !!! example "Python"
 
-````
-```python
-circle_area(radius)
-```
+    ```python
+    circle_area(radius)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-42.00000000000001
-```
-````
+    ```text
+    42.00000000000001
+    ```
 
 مثل قبل، می‌توانیم مقدار بازگشتی را در یک متغیر ذخیره کنیم:
 
@@ -122,33 +112,29 @@ a = circle_area(radius)
 
 !!! example "Python"
 
-````
-```python
-circle_area(radius) + 2 * circle_area(radius / 2)
-```
+    ```python
+    circle_area(radius) + 2 * circle_area(radius / 2)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-63.000000000000014
-```
-````
+    ```text
+    63.000000000000014
+    ```
 
 همچنین هر زمان که بخواهیم، می‌توانیم مقدار ذخیره‌شده در متغیر `a` را نمایش دهیم:
 
 !!! example "Python"
 
-````
-```python
-a
-```
+    ```python
+    a
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-42.00000000000001
-```
-````
+    ```text
+    42.00000000000001
+    ```
 
 اما یک سؤال: آیا می‌توانیم به متغیر `area` که داخل تابع تعریف کرده‌ایم، از بیرون تابع دسترسی داشته باشیم؟
 
@@ -156,17 +142,15 @@ a
 
 !!! example "Python"
 
-````
-```python
-area
-```
+    ```python
+    area
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-NameError: name 'area' is not defined
-```
-````
+    ```text
+    NameError: name 'area' is not defined
+    ```
 
 چرا چنین خطایی رخ می‌دهد؟
 
@@ -186,12 +170,10 @@ NameError: name 'area' is not defined
 
 !!! example "Python"
 
-````
-```python
-def repeat(word, n):
-    print(word * n)
-```
-````
+    ```python
+    def repeat(word, n):
+        print(word * n)
+    ```
 
 این تابع با استفاده از `print()` یک String را نمایش می‌دهد، اما هیچ دستور `return` ندارد.
 
@@ -199,17 +181,15 @@ def repeat(word, n):
 
 !!! example "Python"
 
-````
-```python
-repeat('Finland, ', 3)
-```
+    ```python
+    repeat('Finland, ', 3)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Finland, Finland, Finland,
-```
-````
+    ```text
+    Finland, Finland, Finland,
+    ```
 
 همان‌طور که می‌بینی، تابع عبارت موردنظر را نمایش می‌دهد. اما نمایش‌دادن یک مقدار با برگرداندن آن تفاوت دارد!
 
@@ -217,17 +197,15 @@ Finland, Finland, Finland,
 
 !!! example "Python"
 
-````
-```python
-result = repeat('Finland, ', 3)
-```
+    ```python
+    result = repeat('Finland, ', 3)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Finland, Finland, Finland,
-```
-````
+    ```text
+    Finland, Finland, Finland,
+    ```
 
 با وجود اینکه نتیجه را در متغیر `result` ذخیره کرده‌ایم، تابع همچنان متن را نمایش می‌دهد؛ چون این کار توسط `print()` انجام می‌شود.
 
@@ -243,17 +221,15 @@ result
 
 !!! example "Python"
 
-````
-```python
-print(result)
-```
+    ```python
+    print(result)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-None
-```
-````
+    ```text
+    None
+    ```
 
 پس مقدار بازگشتی تابع `repeat()` برابر با `None` است.
 
@@ -272,12 +248,10 @@ None
 
 !!! example "Python"
 
-````
-```python
-def repeat_string(word, n):
-    return word * n
-```
-````
+    ```python
+    def repeat_string(word, n):
+        return word * n
+    ```
 
 دقت کن که در دستور `return` مجبور نیستیم حتماً نام یک متغیر را بنویسیم؛ می‌توانیم مستقیماً یک Expression را برگردانیم.
 
@@ -293,17 +267,15 @@ line = repeat_string('Spam, ', 4)
 
 !!! example "Python"
 
-````
-```python
-line
-```
+    ```python
+    line
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'Spam, Spam, Spam, Spam, '
-```
-````
+    ```text
+    'Spam, Spam, Spam, Spam, '
+    ```
 
 این تابع برخلاف نسخه قبلی، چیزی را مستقیماً نمایش نمی‌دهد و اثر جانبی دیگری هم ندارد؛ تنها کاری که انجام می‌دهد، محاسبه و برگرداندن یک مقدار است.
 
