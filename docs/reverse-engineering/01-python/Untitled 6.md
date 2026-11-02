@@ -6,12 +6,10 @@
 
 !!! example "Python"
 
-````
-```python
-def recurse():
-    recurse()
-```
-````
+    ```python
+    def recurse():
+        recurse()
+    ```
 
 هر بار که تابع `recurse` اجرا می‌شود، دوباره خودش را فراخوانی می‌کند. هر فراخوانی جدید نیز یک Frame جدید در Call Stack ایجاد می‌کند.
 
@@ -21,17 +19,15 @@ def recurse():
 
 !!! example "Python"
 
-````
-```python
-recurse()
-```
+    ```python
+    recurse()
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-RecursionError: maximum recursion depth exceeded
-```
-````
+    ```text
+    RecursionError: maximum recursion depth exceeded
+    ```
 
 همان‌طور که در Traceback می‌بینی، خطا از نوع `RecursionError` است. در این مثال، هنگام وقوع خطا تقریباً سه هزار Frame در Stack ایجاد شده بود.
 
@@ -56,11 +52,9 @@ RecursionError: maximum recursion depth exceeded
 
 !!! example "Python"
 
-````
-```python
-text = input()
-```
-````
+    ```python
+    text = input()
+    ```
 
 در این مثال، برنامه منتظر می‌ماند تا کاربر ورودی‌ای وارد کند. سپس مقدار واردشده به متغیر `text` اختصاص داده می‌شود.
 
@@ -72,21 +66,19 @@ text = input()
 
 !!! example "Python"
 
-````
-```python
-name = input('What...is your name?\n')
-name
-```
+    ```python
+    name = input('What...is your name?\n')
+    name
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-What...is your name?
-It is Arthur, King of the Britons
+    ```text
+    What...is your name?
+    It is Arthur, King of the Britons
 
-'It is Arthur, King of the Britons'
-```
-````
+    'It is Arthur, King of the Britons'
+    ```
 
 در این مثال، عبارت `What...is your name?` به کاربر نمایش داده می‌شود و برنامه منتظر می‌ماند تا او پاسخش را وارد کند.
 
@@ -108,38 +100,34 @@ It is Arthur, King of the Britons
 
 !!! example "Python"
 
-````
-```python
-prompt = 'What...is the airspeed velocity of an unladen swallow?\n'
-speed = input(prompt)
-speed
-```
+    ```python
+    prompt = 'What...is the airspeed velocity of an unladen swallow?\n'
+    speed = input(prompt)
+    speed
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-What...is the airspeed velocity of an unladen swallow?
-What do you mean: an African or European swallow?
+    ```text
+    What...is the airspeed velocity of an unladen swallow?
+    What do you mean: an African or European swallow?
 
-'What do you mean: an African or European swallow?'
-```
-````
+    'What do you mean: an African or European swallow?'
+    ```
 
 در این مثال، کاربر به‌جای یک عدد، یک جمله وارد کرده است. حالا اگر بخواهیم مقدار `speed` را به عدد صحیح تبدیل کنیم، چه اتفاقی می‌افتد؟
 
 !!! example "Python"
 
-````
-```python
-int(speed)
-```
+    ```python
+    int(speed)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-ValueError: invalid literal for int() with base 10: 'What do you mean: an African or European swallow?'
-```
-````
+    ```text
+    ValueError: invalid literal for int() with base 10: 'What do you mean: an African or European swallow?'
+    ```
 
 همان‌طور که می‌بینی، پایتون نمی‌تواند این String را به یک عدد صحیح تبدیل کند؛ بنابراین خطای `ValueError` رخ می‌دهد.
 
@@ -164,18 +152,16 @@ ValueError: invalid literal for int() with base 10: 'What do you mean: an Africa
 
 !!! example "Python"
 
-````
-```python
-x = 5
- y = 6
-```
+    ```python
+    x = 5
+     y = 6
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-IndentationError: unexpected indent
-```
-````
+    ```text
+    IndentationError: unexpected indent
+    ```
 
 در این مثال، خط دوم به‌اشتباه با یک فاصله اضافی شروع شده است. پایتون انتظار ندارد این خط در چنین موقعیتی دارای تورفتگی باشد.
 
@@ -191,23 +177,21 @@ IndentationError: unexpected indent
 
 !!! example "Python"
 
-````
-```python
-import math
+    ```python
+    import math
 
-numerator = 9
-denominator = 10
+    numerator = 9
+    denominator = 10
 
-ratio = numerator // denominator
-decibels = 10 * math.log10(ratio)
-```
+    ratio = numerator // denominator
+    decibels = 10 * math.log10(ratio)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-ValueError: math domain error
-```
-````
+    ```text
+    ValueError: math domain error
+    ```
 
 پیام خطا به خط پنجم اشاره می‌کند:
 
@@ -253,23 +237,21 @@ ValueError: math domain error
 
 !!! example "Python"
 
-````
-```python
-import math
+    ```python
+    import math
 
-numerator = 9
-denominator = 10
+    numerator = 9
+    denominator = 10
 
-ratio = numerator / denominator
-decibels = 10 * math.log10(ratio)
-```
+    ratio = numerator / denominator
+    decibels = 10 * math.log10(ratio)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
--0.4575749056067512
-```
-````
+    ```text
+    -0.4575749056067512
+    ```
 
 این بار مقدار `ratio` برابر با `0.9` است و تابع `math.log10()` می‌تواند آن را محاسبه کند.
 
