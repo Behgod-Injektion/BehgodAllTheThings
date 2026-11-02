@@ -21,18 +21,16 @@
 
 !!! example "Python"
 
-````
-```python
-x = 5
-x > 0 and x < 10
-```
+    ```python
+    x = 5
+    x > 0 and x < 10
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 چون هر دو شرط درست هستند، نتیجهٔ کل عبارت `True` می‌شود.
 
@@ -46,18 +44,16 @@ True
 
 !!! example "Python"
 
-````
-```python
-x = 5
-x % 2 == 0 or x % 3 == 0
-```
+    ```python
+    x = 5
+    x % 2 == 0 or x % 3 == 0
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 چرا `False`؟
 
@@ -76,20 +72,18 @@ False
 
 !!! example "Python"
 
-````
-```python
-x = 5
-y = 7
+    ```python
+    x = 5
+    y = 7
 
-not x > y
-```
+    not x > y
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 ابتدا عبارت `x > y` را بررسی می‌کنیم. چون ۵ بزرگ‌تر از ۷ نیست، نتیجه `False` است. حالا `not` این نتیجه را معکوس می‌کند و در نهایت `True` به دست می‌آید.
 
@@ -103,17 +97,15 @@ True
 
 !!! example "Python"
 
-````
-```python
-42 and True
-```
+    ```python
+    42 and True
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 این انعطاف‌پذیری گاهی مفید است، اما ممکن است باعث سردرگمی هم بشود. به همین دلیل بهتر است در ابتدای یادگیری، عملگرهای منطقی را عمدتاً با عبارت‌های بولی استفاده کنیم.
 
@@ -129,20 +121,18 @@ True
 
 !!! example "Python"
 
-````
-```python
-x = 5
+    ```python
+    x = 5
 
-if x > 0:
-    print('x is positive')
-```
+    if x > 0:
+        print('x is positive')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-x is positive
-```
-````
+    ```text
+    x is positive
+    ```
 
 کلمهٔ `if` یک Keyword در Python است و برای بررسی شرط استفاده می‌شود.
 
@@ -171,14 +161,12 @@ x is positive
 
 !!! example "Python"
 
-````
-```python
-x = -5
+    ```python
+    x = -5
 
-if x < 0:
-    pass  # TODO: need to handle negative values!
-```
-````
+    if x < 0:
+        pass  # TODO: need to handle negative values!
+    ```
 
 در این مثال، شرط برقرار است؛ اما چون تنها دستور داخل Body، یعنی `pass`، هیچ کاری انجام نمی‌دهد، خروجی خاصی مشاهده نمی‌کنیم.
 
@@ -194,35 +182,31 @@ if x < 0:
 
 !!! example "Python"
 
-````
-```python
-if condition:
-    # اجرا در صورت درست بودن شرط
-else:
-    # اجرا در صورت نادرست بودن شرط
-```
-````
+    ```python
+    if condition:
+        # اجرا در صورت درست بودن شرط
+    else:
+        # اجرا در صورت نادرست بودن شرط
+    ```
 
 بیایید با یک مثال واقعی‌تر موضوع را بررسی کنیم. می‌خواهیم مشخص کنیم یک عدد زوج است یا فرد:
 
 !!! example "Python"
 
-````
-```python
-x = 5
+    ```python
+    x = 5
 
-if x % 2 == 0:
-    print('x is even')
-else:
-    print('x is odd')
-```
+    if x % 2 == 0:
+        print('x is even')
+    else:
+        print('x is odd')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-x is odd
-```
-````
+    ```text
+    x is odd
+    ```
 
 چطور برنامه این موضوع را تشخیص می‌دهد؟
 
@@ -253,25 +237,23 @@ x is odd
 
 !!! example "Python"
 
-````
-```python
-x = 5
-y = 7
+    ```python
+    x = 5
+    y = 7
 
-if x < y:
-    print('x is less than y')
-elif x > y:
-    print('x is greater than y')
-else:
-    print('x and y are equal')
-```
+    if x < y:
+        print('x is less than y')
+    elif x > y:
+        print('x is greater than y')
+    else:
+        print('x and y are equal')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-x is less than y
-```
-````
+    ```text
+    x is less than y
+    ```
 
 در این مثال، Python شرط‌ها را به‌ترتیب بررسی می‌کند:
 
