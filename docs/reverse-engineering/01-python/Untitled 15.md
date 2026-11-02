@@ -6,18 +6,16 @@
 
 !!! example "Python"
 
-````
-```python
-fruit = 'banana'
-fruit[0:3]
-```
+    ```python
+    fruit = 'banana'
+    fruit[0:3]
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'ban'
-```
-````
+    ```text
+    'ban'
+    ```
 
 ساختار کلی به این شکل است:
 
