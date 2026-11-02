@@ -75,10 +75,12 @@
 
 اما صبر کن! پایتون برای چنین شرایطی یک روش حتی خلاصه‌تر هم دارد: **Chained Comparisons** یا مقایسه‌های زنجیره‌ای.
 
-```
-if 0 < x < 10:
-    print('x is a positive single-digit number.')
-```
+!!! example "Python"
+
+    ```python
+    if 0 < x < 10:
+        print('x is a positive single-digit number.')
+    ```
 
 این عبارت دقیقاً همان معنی دو مقایسه‌ای را دارد که با `and` به هم متصل شده‌اند. یعنی مقدار `x` باید هم‌زمان بزرگ‌تر از صفر و کوچک‌تر از ۱۰ باشد.
 
