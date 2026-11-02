@@ -30,9 +30,11 @@
 
 اما این پرانتزهای خالی بعد از نام تابع چه معنایی دارند؟
 
-```
-def print_lyrics():
-```
+!!! example "Python"
+
+    ```python
+    def print_lyrics():
+    ```
 
 پرانتزها محل قرار گرفتن پارامترهای تابع هستند. خالی بودن آن‌ها یعنی این تابع در حال حاضر هیچ آرگومانی دریافت نمی‌کند.
 
@@ -62,11 +64,13 @@ Body یک تابع می‌تواند شامل هر تعداد دستور و از
 
 وقتی کد زیر را اجرا می‌کنیم:
 
-```
-def print_lyrics():
-    print("I'm a lumberjack, and I'm okay.")
-    print("I sleep all night and I work all day.")
-```
+!!! example "Python"
+
+    ```python
+    def print_lyrics():
+        print("I'm a lumberjack, and I'm okay.")
+        print("I sleep all night and I work all day.")
+    ```
 
 Python تابعی با نام `print_lyrics` تعریف می‌کند، اما هنوز دستورهای داخل آن اجرا نمی‌شوند.
 
