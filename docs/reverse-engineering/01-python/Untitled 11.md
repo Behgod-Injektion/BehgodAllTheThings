@@ -72,12 +72,14 @@
 
 قبل از ادامه، بهتر است این حلقه را داخل یک تابع قرار دهیم:
 
-```
-def has_e():
-    for letter in "Gadsby":
-        if letter == 'E' or letter == 'e':
-            print('This word has an "e"')
-```
+!!! example "Python"
+
+    ```python
+    def has_e():
+        for letter in "Gadsby":
+            if letter == 'E' or letter == 'e':
+                print('This word has an "e"')
+    ```
 
 اما هنوز یک مشکل داریم: تابع ما فقط پیام نمایش می‌دهد و نتیجه مشخصی برنمی‌گرداند.
 
@@ -183,9 +185,11 @@ def has_e():
 
 متد در واقع تابعی است که به یک شیء تعلق دارد. در این مثال، متد `readline()` متعلق به شیء فایل است؛ بنابراین برای فراخوانی آن، ابتدا نام شیء را می‌نویسیم، سپس از عملگر نقطه (`.`) و در نهایت نام متد استفاده می‌کنیم:
 
-```
-file_object.readline()
-```
+!!! example "Python"
+
+    ```python
+    file_object.readline()
+    ```
 
 اولین کلمه موجود در فهرست، `aa` است که نام نوعی گدازه محسوب می‌شود.
 
