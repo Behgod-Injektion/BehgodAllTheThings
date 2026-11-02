@@ -6,13 +6,15 @@
 
 برای درک بهتر، بیایید با چند تابع، بخش‌هایی از ترانهٔ طنزآمیز «The Spam Song» را نمایش دهیم:
 
-```
-Spam, Spam, Spam, Spam,
-Spam, Spam, Spam, Spam,
-Spam, Spam,
-(Lovely Spam, Wonderful Spam!)
-Spam, Spam,
-```
+!!! example "Python"
+
+    ```python
+    Spam, Spam, Spam, Spam,
+    Spam, Spam, Spam, Spam,
+    Spam, Spam,
+    (Lovely Spam, Wonderful Spam!)
+    Spam, Spam,
+    ```
 
 ابتدا تابعی تعریف می‌کنیم که دو پارامتر دریافت می‌کند:
 
@@ -171,9 +173,11 @@ Spam, Spam,
 
 اما اجزای خط اول چه معنایی دارند؟
 
-```
-for i in range(2):
-```
+!!! example "Python"
+
+    ```python
+    for i in range(2):
+    ```
 
 - `for` کلمهٔ کلیدی شروع حلقه است.
     
