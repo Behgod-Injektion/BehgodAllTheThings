@@ -68,11 +68,13 @@ Stack Diagram مشابه State Diagram مقادیر متغیرها را نشان
 
 برای مثال، در کدی که بررسی کردیم:
 
-```
-def cat_twice(part1, part2):
-    cat = part1 + part2
-    print_twice(cat)
-```
+!!! example "Python"
+
+    ```python
+    def cat_twice(part1, part2):
+        cat = part1 + part2
+        print_twice(cat)
+    ```
 
 متغیرهای `part1`، `part2` و `cat` متعلق به Frame تابع `cat_twice` هستند. بنابراین نباید آن‌ها را با متغیرهای متعلق به توابع دیگر یا محیط بیرون از تابع اشتباه بگیریم.
 
@@ -82,9 +84,11 @@ Frameها در Stack Diagram به شکل یک پشته کنار هم قرار م
 
 برای مثال، هنگام اجرای زنجیرهٔ زیر:
 
-```
-cat_twice(line1, line2)
-```
+!!! example "Python"
+
+    ```python
+    cat_twice(line1, line2)
+    ```
 
 تابع `cat_twice()`، تابع `print_twice()` را فراخوانی می‌کند و آن هم در نهایت تابع `print()` را اجرا می‌کند.
 
