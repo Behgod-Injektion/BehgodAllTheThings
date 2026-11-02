@@ -32,9 +32,11 @@
 
 حالا فرض کن بخواهیم نتیجه را در یک متغیر ذخیره کنیم:
 
-```
-radius = math.sqrt(42 / math.pi)
-```
+!!! example "Python"
+
+    ```python
+    radius = math.sqrt(42 / math.pi)
+    ```
 
 در این حالت، Jupyter چیزی نمایش نمی‌دهد؛ چون نتیجه به متغیر `radius` اختصاص داده شده است.
 
@@ -82,9 +84,11 @@ radius = math.sqrt(42 / math.pi)
 
 اما نکته اصلی در خط آخر است:
 
-```
-return area
-```
+!!! example "Python"
+
+    ```python
+    return area
+    ```
 
 این دستور را **Return Statement** می‌نامیم. وظیفه آن برگرداندن مقدار `area` به محلی است که تابع از آنجا فراخوانی شده است.
 
@@ -104,9 +108,11 @@ return area
 
 مثل قبل، می‌توانیم مقدار بازگشتی را در یک متغیر ذخیره کنیم:
 
-```
-a = circle_area(radius)
-```
+!!! example "Python"
+
+    ```python
+    a = circle_area(radius)
+    ```
 
 یا مستقیماً از آن در یک Expression استفاده کنیم:
 
@@ -211,9 +217,11 @@ a = circle_area(radius)
 
 حالا اگر مقدار `result` را در Jupyter بررسی کنیم، چیزی نمایش داده نمی‌شود:
 
-```
-result
-```
+!!! example "Python"
+
+    ```python
+    result
+    ```
 
 اما این به معنی خالی‌بودن متغیر نیست. متغیر `result` واقعاً یک مقدار دارد، ولی Jupyter مقدار `None` را به‌صورت خودکار نمایش نمی‌دهد.
 
@@ -257,9 +265,11 @@ result
 
 حالا نتیجه فراخوانی تابع را در متغیری ذخیره می‌کنیم:
 
-```
-line = repeat_string('Spam, ', 4)
-```
+!!! example "Python"
+
+    ```python
+    line = repeat_string('Spam, ', 4)
+    ```
 
 این بار هنگام اجرای تابع چیزی نمایش داده نمی‌شود؛ چون تابع فقط یک مقدار را برمی‌گرداند و آن مقدار در متغیر `line` ذخیره می‌شود.
 
