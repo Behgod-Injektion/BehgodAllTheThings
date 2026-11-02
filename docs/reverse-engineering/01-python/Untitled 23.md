@@ -43,18 +43,16 @@
 
 !!! example "Python"
 
-````
-```python
-string = open('words.txt').read()
-len(string)
-```
+    ```python
+    string = open('words.txt').read()
+    len(string)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-1016511
-```
-````
+    ```text
+    1016511
+    ```
 
 این بار به‌جای یک لیست از کلمات، یک رشتهٔ واحد داریم که بیش از یک میلیون کاراکتر دارد.
 
@@ -62,18 +60,16 @@ len(string)
 
 !!! example "Python"
 
-````
-```python
-word_list = string.split()
-len(word_list)
-```
+    ```python
+    word_list = string.split()
+    len(word_list)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-113783
-```
-````
+    ```text
+    113783
+    ```
 
 همان‌طور که می‌بینی، نتیجه با روش قبلی یکسان است؛ یعنی لیست ما همچنان شامل ۱۱۳٬۷۸۳ کلمه است.
 
@@ -83,17 +79,15 @@ len(word_list)
 
 !!! example "Python"
 
-````
-```python
-'demotic' in word_list
-```
+    ```python
+    'demotic' in word_list
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 پس کلمهٔ `demotic` در لیست وجود دارد.
 
@@ -101,17 +95,15 @@ True
 
 !!! example "Python"
 
-````
-```python
-'contrafibularities' in word_list
-```
+    ```python
+    'contrafibularities' in word_list
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 این کلمه در لیست پیدا نشده است.
 
@@ -129,19 +121,17 @@ False
 
 !!! example "Python"
 
-````
-```python
-word = 'plumage!'
-word = word.strip('!')
-word
-```
+    ```python
+    word = 'plumage!'
+    word = word.strip('!')
+    word
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'plumage'
-```
-````
+    ```text
+    'plumage'
+    ```
 
 در اینجا `strip()` یک رشتهٔ جدید برمی‌گرداند و ما آن را دوباره در متغیر `word` ذخیره می‌کنیم.
 
@@ -149,12 +139,10 @@ word
 
 !!! example "Python"
 
-````
-```python
-t = [1, 2, 3]
-t = t.remove(3)  # WRONG!
-```
-````
+    ```python
+    t = [1, 2, 3]
+    t = t.remove(3)  # WRONG!
+    ```
 
 اما این کار اشتباه است!
 
@@ -166,17 +154,15 @@ t = t.remove(3)  # WRONG!
 
 !!! example "Python"
 
-````
-```python
-t.remove(2)
-```
+    ```python
+    t.remove(2)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-AttributeError: 'NoneType' object has no attribute 'remove'
-```
-````
+    ```text
+    AttributeError: 'NoneType' object has no attribute 'remove'
+    ```
 
 شاید پیام خطا در نگاه اول کمی عجیب به نظر برسد. بیایید آن را دقیق‌تر بررسی کنیم.
 
