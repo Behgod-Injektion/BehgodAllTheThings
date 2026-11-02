@@ -48,17 +48,15 @@ fibonacci(n) &= fibonacci(n-1) + fibonacci(n-2)
 
 !!! example "Python"
 
-````
-```python
-def fibonacci(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        return fibonacci(n-1) + fibonacci(n-2)
-```
-````
+    ```python
+    def fibonacci(n):
+        if n == 0:
+            return 0
+        elif n == 1:
+            return 1
+        else:
+            return fibonacci(n-1) + fibonacci(n-2)
+    ```
 
 اگر بخواهیم جریان اجرای این تابع را برای مقادیر کوچک `n` هم مرحله‌به‌مرحله دنبال کنیم، خیلی زود سردرگم می‌شویم!
 
@@ -85,17 +83,15 @@ fibonacci(n-2)
 
 !!! example "Python"
 
-````
-```python
-factorial(1.5)
-```
+    ```python
+    factorial(1.5)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-RecursionError: maximum recursion depth exceeded in comparison
-```
-````
+    ```text
+    RecursionError: maximum recursion depth exceeded in comparison
+    ```
 
 به نظر می‌رسد با یک بازگشت بی‌نهایت (Infinite Recursion) مواجه شده‌ایم. اما چرا؟ مگر تابع ما شرط پایه (Base Case) ندارد؟
 
@@ -129,33 +125,29 @@ Python تابع داخلی `isinstance()` را برای بررسی نوع یک �
 
 !!! example "Python"
 
-````
-```python
-isinstance(3, int)
-```
+    ```python
+    isinstance(3, int)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 و برای یک عدد اعشاری:
 
 !!! example "Python"
 
-````
-```python
-isinstance(1.5, int)
-```
+    ```python
+    isinstance(1.5, int)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 همان‌طور که می‌بینیم، `isinstance()` یک مقدار بولی (`True` یا `False`) برمی‌گرداند و مشخص می‌کند که مقدار ورودی از نوع موردنظر هست یا نه.
 
@@ -163,21 +155,19 @@ False
 
 !!! example "Python"
 
-````
-```python
-def factorial(n):
-    if not isinstance(n, int):
-        print('factorial is only defined for integers.')
-        return None
-    elif n < 0:
-        print('factorial is not defined for negative numbers.')
-        return None
-    elif n == 0:
-        return 1
-    else:
-        return n * factorial(n-1)
-```
-````
+    ```python
+    def factorial(n):
+        if not isinstance(n, int):
+            print('factorial is only defined for integers.')
+            return None
+        elif n < 0:
+            print('factorial is not defined for negative numbers.')
+            return None
+        elif n == 0:
+            return 1
+        else:
+            return n * factorial(n-1)
+    ```
 
 بیایید ببینیم چه تغییراتی ایجاد کردیم.
 
@@ -197,17 +187,15 @@ if not isinstance(n, int):
 
 !!! example "Python"
 
-````
-```python
-factorial('crunchy frog')
-```
+    ```python
+    factorial('crunchy frog')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-factorial is only defined for integers.
-```
-````
+    ```text
+    factorial is only defined for integers.
+    ```
 
 **دوم: بررسی منفی نبودن عدد**
 
@@ -223,17 +211,15 @@ elif n < 0:
 
 !!! example "Python"
 
-````
-```python
-factorial(-2)
-```
+    ```python
+    factorial(-2)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-factorial is not defined for negative numbers.
-```
-````
+    ```text
+    factorial is not defined for negative numbers.
+    ```
 
 **سوم: اجرای محاسبه بازگشتی**
 
@@ -307,22 +293,20 @@ def factorial(n):
 
 !!! example "Python"
 
-````
-```python
-def factorial(n):
-    space = ' ' * (4 * n)
-    print(space, 'factorial', n)
+    ```python
+    def factorial(n):
+        space = ' ' * (4 * n)
+        print(space, 'factorial', n)
 
-    if n == 0:
-        print(space, 'returning 1')
-        return 1
-    else:
-        recurse = factorial(n-1)
-        result = n * recurse
-        print(space, 'returning', result)
-        return result
-```
-````
+        if n == 0:
+            print(space, 'returning 1')
+            return 1
+        else:
+            recurse = factorial(n-1)
+            result = n * recurse
+            print(space, 'returning', result)
+            return result
+    ```
 
 در این نسخه، دو متغیر جدید داریم:
 
@@ -339,28 +323,26 @@ def factorial(n):
 
 !!! example "Python"
 
-````
-```python
-factorial(4)
-```
+    ```python
+    factorial(4)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-             factorial 4
-         factorial 3
-     factorial 2
- factorial 1
-factorial 0
-returning 1
- returning 1
-     returning 2
-         returning 6
-             returning 24
+    ```text
+                 factorial 4
+             factorial 3
+         factorial 2
+     factorial 1
+    factorial 0
+    returning 1
+     returning 1
+         returning 2
+             returning 6
+                 returning 24
 
-24
-```
-````
+    24
+    ```
 
 به تورفتگی خروجی دقت کن.
 
