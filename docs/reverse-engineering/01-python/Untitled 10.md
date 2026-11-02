@@ -62,10 +62,12 @@ fibonacci(n) &= fibonacci(n-1) + fibonacci(n-2)
 
 اما با استفاده از روش Leap of Faith، کار ساده‌تر است. فرض می‌کنیم دو فراخوانی بازگشتی زیر:
 
-```
-fibonacci(n-1)
-fibonacci(n-2)
-```
+!!! example "Python"
+
+    ```python
+    fibonacci(n-1)
+    fibonacci(n-2)
+    ```
 
 هرکدام نتیجه درست خودشان را برمی‌گردانند. در این صورت، جمع کردن آن دو نتیجه دقیقاً همان چیزی است که برای محاسبه `fibonacci(n)` نیاز داریم.
 
@@ -95,10 +97,12 @@ fibonacci(n-2)
 
 به نظر می‌رسد با یک بازگشت بی‌نهایت (Infinite Recursion) مواجه شده‌ایم. اما چرا؟ مگر تابع ما شرط پایه (Base Case) ندارد؟
 
-```
-if n == 0:
-    return 1
-```
+!!! example "Python"
+
+    ```python
+    if n == 0:
+        return 1
+    ```
 
 مشکل اینجاست که شرط پایه فقط زمانی برقرار می‌شود که `n` دقیقاً برابر صفر باشد. اگر ورودی عدد صحیح نباشد، ممکن است هیچ‌وقت به این شرط نرسیم.
 
@@ -173,11 +177,13 @@ Python تابع داخلی `isinstance()` را برای بررسی نوع یک �
 
 **اول: بررسی نوع ورودی**
 
-```
-if not isinstance(n, int):
-    print('factorial is only defined for integers.')
-    return None
-```
+!!! example "Python"
+
+    ```python
+    if not isinstance(n, int):
+        print('factorial is only defined for integers.')
+        return None
+    ```
 
 در ابتدای تابع بررسی می‌کنیم که آیا `n` از نوع `int` است یا نه.
 
@@ -199,11 +205,13 @@ if not isinstance(n, int):
 
 **دوم: بررسی منفی نبودن عدد**
 
-```
-elif n < 0:
-    print('factorial is not defined for negative numbers.')
-    return None
-```
+!!! example "Python"
+
+    ```python
+    elif n < 0:
+        print('factorial is not defined for negative numbers.')
+        return None
+    ```
 
 اگر ورودی عدد صحیح باشد، بررسی می‌کنیم که منفی نباشد. فاکتوریل در این تابع برای اعداد منفی تعریف نشده است؛ بنابراین در صورت منفی بودن ورودی، پیام مناسبی نمایش می‌دهیم و با `return None` از تابع خارج می‌شویم.
 
@@ -225,12 +233,14 @@ elif n < 0:
 
 اگر از دو بررسی قبلی عبور کنیم، می‌دانیم که `n` یک عدد صحیح نامنفی است. بنابراین می‌توانیم با اطمینان از اینکه بازگشت در نهایت به شرط پایه می‌رسد، محاسبه فاکتوریل را انجام دهیم:
 
-```
-elif n == 0:
-    return 1
-else:
-    return n * factorial(n-1)
-```
+!!! example "Python"
+
+    ```python
+    elif n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+    ```
 
 به این ترتیب، قبل از اجرای منطق اصلی تابع، ورودی را اعتبارسنجی کرده‌ایم.
 
@@ -257,11 +267,13 @@ else:
 
 مثلاً:
 
-```
-def factorial(n):
-    print("n =", n, "type =", type(n))
-    # ادامه تابع
-```
+!!! example "Python"
+
+    ```python
+    def factorial(n):
+        print("n =", n, "type =", type(n))
+        # ادامه تابع
+    ```
 
 به این ترتیب، قبل از اینکه تابع وارد منطق اصلی خودش شود، می‌توانیم ببینیم دقیقاً چه مقداری دریافت کرده است.
 
