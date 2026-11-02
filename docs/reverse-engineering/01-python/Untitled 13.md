@@ -126,19 +126,23 @@
 
 برای مثال، در تست اول:
 
-```
->>> uses_any('banana', 'aeiou')
-True
-```
+!!! example "Python"
+
+    ```python
+    >>> uses_any('banana', 'aeiou')
+    True
+    ```
 
 چون کلمه `banana` شامل حرف `a` است، انتظار داریم نتیجه `True` باشد.
 
 در تست دوم:
 
-```
->>> uses_any('apple', 'xyz')
-False
-```
+!!! example "Python"
+
+    ```python
+    >>> uses_any('apple', 'xyz')
+    False
+    ```
 
 چون هیچ‌کدام از حروف `x`, `y`, `z` در کلمه `apple` وجود ندارند، نتیجه مورد انتظار `False` است.
 
