@@ -19,9 +19,11 @@
 
 ساختار کلی به این شکل است:
 
-```
-string[start:end]
-```
+!!! example "Python"
+
+    ```python
+    string[start:end]
+    ```
 
 این عبارت بخشی از رشته را از اندیس `start` تا اندیس `end` انتخاب می‌کند؛ با یک تفاوت مهم:
 
@@ -36,16 +38,18 @@ string[start:end]
 
 برای مثال:
 
-```
-fruit = 'banana'
-fruit[3:6]
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    fruit = 'banana'
+    fruit[3:6]
+    ```
 
-```
-'ana'
-```
+    **Output:**
+
+    ```text
+    'ana'
+    ```
 
 دقت کن که اندیس `6` برای یک کاراکتر مستقل معتبر نیست؛ چون آخرین کاراکتر رشته در اندیس `5` قرار دارد. اما در برش رشته‌ها، استفاده از `6` کاملاً مجاز است؛ چون اندیس پایان مشخص می‌کند برش تا کجا ادامه پیدا کند، نه اینکه حتماً به کاراکتری در آن موقعیت دسترسی پیدا کنیم.
 
@@ -55,69 +59,79 @@ fruit[3:6]
 
 اگر اندیس شروع را ننویسیم، برش از ابتدای رشته آغاز می‌شود:
 
-```
-fruit = 'banana'
-fruit[:3]
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    fruit = 'banana'
+    fruit[:3]
+    ```
 
-```
-'ban'
-```
+    **Output:**
+
+    ```text
+    'ban'
+    ```
 
 اگر اندیس پایان را حذف کنیم، برش تا انتهای رشته ادامه پیدا می‌کند:
 
-```
-fruit = 'banana'
-fruit[3:]
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    fruit = 'banana'
+    fruit[3:]
+    ```
 
-```
-'ana'
-```
+    **Output:**
+
+    ```text
+    'ana'
+    ```
 
 حالا یک حالت دیگر را بررسی کنیم. اگر اندیس شروع و پایان برابر باشند، چه اتفاقی می‌افتد؟
 
-```
-fruit = 'banana'
-fruit[3:3]
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    fruit = 'banana'
+    fruit[3:3]
+    ```
 
-```
-''
-```
+    **Output:**
+
+    ```text
+    ''
+    ```
 
 نتیجه یک رشته خالی (Empty String) است. رشته خالی هیچ کاراکتری ندارد و طول آن برابر با صفر است:
 
-```
-len('')
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    len('')
+    ```
 
-```
-0
-```
+    **Output:**
+
+    ```text
+    0
+    ```
 
 حالا یک سؤال: اگر هر دو اندیس را حذف کنیم و بنویسیم `fruit[:]`، چه اتفاقی می‌افتد؟
 
 این عبارت کل رشته را از ابتدا تا انتها انتخاب می‌کند:
 
-```
-fruit = 'banana'
-fruit[:]
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    fruit = 'banana'
+    fruit[:]
+    ```
 
-```
-'banana'
-```
+    **Output:**
+
+    ```text
+    'banana'
+    ```
 
 ---
 
@@ -125,16 +139,20 @@ fruit[:]
 
 فرض کن رشته‌ای به نام `greeting` داریم و می‌خواهیم اولین کاراکتر آن را تغییر دهیم. شاید در نگاه اول فکر کنیم می‌توانیم مثل لیست‌ها، با استفاده از اندیس مستقیماً مقدار یک کاراکتر را تغییر دهیم:
 
-```
-greeting = 'Hello, world!'
-greeting[0] = 'J'
-```
+!!! example "Python"
+
+    ```python
+    greeting = 'Hello, world!'
+    greeting[0] = 'J'
+    ```
 
 اما اجرای این کد با خطای زیر مواجه می‌شود:
 
-```
-TypeError: 'str' object does not support item assignment
-```
+!!! example "Python"
+
+    ```python
+    TypeError: 'str' object does not support item assignment
+    ```
 
 این خطا به ما می‌گوید که شیء از نوع `str` اجازه نمی‌دهد مقدار یکی از اعضای آن را مستقیماً تغییر دهیم.
 
@@ -146,17 +164,19 @@ TypeError: 'str' object does not support item assignment
 
 برای مثال، می‌خواهیم حرف اول `Hello` را با `J` جایگزین کنیم تا به `Jello` برسیم. می‌توانیم این کار را با ترکیب دو رشته انجام دهیم:
 
-```
-greeting = 'Hello, world!'
-new_greeting = 'J' + greeting[1:]
-new_greeting
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    greeting = 'Hello, world!'
+    new_greeting = 'J' + greeting[1:]
+    new_greeting
+    ```
 
-```
-'Jello, world!'
-```
+    **Output:**
+
+    ```text
+    'Jello, world!'
+    ```
 
 بیایید ببینیم این عبارت دقیقاً چه کاری انجام می‌دهد:
 
@@ -169,15 +189,17 @@ new_greeting
 
 نکته مهم این است که رشته اصلی هیچ تغییری نکرده است:
 
-```
-greeting
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    greeting
+    ```
 
-```
-'Hello, world!'
-```
+    **Output:**
+
+    ```text
+    'Hello, world!'
+    ```
 
 پس با اینکه مقدار جدیدی ساختیم، مقدار قبلی همچنان دست‌نخورده باقی مانده است.
 
@@ -189,18 +211,20 @@ greeting
 
 برای بررسی برابر بودن دو رشته، از عملگر `==` استفاده می‌کنیم:
 
-```
-word = 'banana'
+!!! example "Python"
 
-if word == 'banana':
-    print('All right, banana.')
-```
+    ```python
+    word = 'banana'
 
-خروجی:
+    if word == 'banana':
+        print('All right, banana.')
+    ```
 
-```
-All right, banana.
-```
+    **Output:**
+
+    ```text
+    All right, banana.
+    ```
 
 اما فقط به بررسی برابری محدود نیستیم. عملگرهای `<`، `>`، `<=` و `>=` نیز می‌توانند برای مقایسه رشته‌ها استفاده شوند.
 
@@ -208,27 +232,31 @@ All right, banana.
 
 برای مثال، تابع زیر یک کلمه را با `banana` مقایسه می‌کند:
 
-```
-def compare_word(word):
-    if word < 'banana':
-        print(word, 'comes before banana.')
-    elif word > 'banana':
-        print(word, 'comes after banana.')
-    else:
-        print('All right, banana.')
-```
+!!! example "Python"
+
+    ```python
+    def compare_word(word):
+        if word < 'banana':
+            print(word, 'comes before banana.')
+        elif word > 'banana':
+            print(word, 'comes after banana.')
+        else:
+            print('All right, banana.')
+    ```
 
 حالا تابع را با کلمه `apple` اجرا می‌کنیم:
 
-```
-compare_word('apple')
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    compare_word('apple')
+    ```
 
-```
-apple comes before banana.
-```
+    **Output:**
+
+    ```text
+    apple comes before banana.
+    ```
 
 اما یک نکته مهم وجود دارد: مقایسه رشته‌ها در Python دقیقاً مطابق با چیزی که انسان‌ها از ترتیب الفبایی انتظار دارند انجام نمی‌شود.
 
@@ -236,30 +264,34 @@ apple comes before banana.
 
 بنابراین:
 
-```
-compare_word('Pineapple')
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    compare_word('Pineapple')
+    ```
 
-```
-Pineapple comes before banana.
-```
+    **Output:**
+
+    ```text
+    Pineapple comes before banana.
+    ```
 
 شاید عجیب به نظر برسد! چون از دید ما، کلمه `Pineapple` باید بعد از `banana` قرار بگیرد؛ اما Python در مقایسه مستقیم، به بزرگی و کوچکی حروف هم توجه می‌کند.
 
 برای جلوگیری از این مشکل، می‌توانیم قبل از مقایسه، هر دو رشته را به یک قالب یکسان تبدیل کنیم؛ مثلاً تمام حروف را کوچک کنیم:
 
-```
-word = 'Pineapple'
+!!! example "Python"
 
-if word.lower() < 'banana':
-    print(word, 'comes before banana.')
-elif word.lower() > 'banana':
-    print(word, 'comes after banana.')
-else:
-    print('All right, banana.')
-```
+    ```python
+    word = 'Pineapple'
+
+    if word.lower() < 'banana':
+        print(word, 'comes before banana.')
+    elif word.lower() > 'banana':
+        print(word, 'comes after banana.')
+    else:
+        print('All right, banana.')
+    ```
 
 با استفاده از `lower()`، رشته را به نسخه‌ای با حروف کوچک تبدیل می‌کنیم و سپس مقایسه را انجام می‌دهیم.
 
@@ -281,23 +313,27 @@ else:
 
 ممکن است تصور کنیم باید چیزی شبیه به فراخوانی یک تابع بنویسیم:
 
-```
-upper(word)
-```
+!!! example "Python"
+
+    ```python
+    upper(word)
+    ```
 
 اما متدها با استفاده از نقطه (`.`) فراخوانی می‌شوند:
 
-```
-word = 'banana'
-new_word = word.upper()
-new_word
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    word = 'banana'
+    new_word = word.upper()
+    new_word
+    ```
 
-```
-'BANANA'
-```
+    **Output:**
+
+    ```text
+    'BANANA'
+    ```
 
 در عبارت `word.upper()`:
 
@@ -314,9 +350,11 @@ new_word
 
 بنابراین وقتی می‌نویسیم:
 
-```
-word.upper()
-```
+!!! example "Python"
+
+    ```python
+    word.upper()
+    ```
 
 می‌گوییم متد `upper` را روی رشته `word` فراخوانی می‌کنیم.
 
