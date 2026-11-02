@@ -6,9 +6,11 @@
 
 برای باز کردن فایل و خواندن محتوای آن، می‌توانیم از تابع `open()` استفاده کنیم:
 
-```
-reader = open('pg345.txt')
-```
+!!! example "Python"
+
+    ```python
+    reader = open('pg345.txt')
+    ```
 
 اما یک نکته وجود دارد: فایل فقط شامل متن اصلی رمان نیست. در ابتدای فایل، اطلاعاتی درباره کتاب و در انتهای آن، اطلاعات مربوط به مجوز انتشار قرار گرفته است.
 
@@ -18,27 +20,31 @@ reader = open('pg345.txt')
 
 می‌توانیم تابعی بنویسیم که بررسی کند آیا یک خط با عبارت مشخصی شروع شده است یا نه:
 
-```
-def is_special_line(line):
-    return line.startswith('*** ')
-```
+!!! example "Python"
+
+    ```python
+    def is_special_line(line):
+        return line.startswith('*** ')
+    ```
 
 در این تابع از متد `startswith()` استفاده کرده‌ایم. این متد بررسی می‌کند که آیا یک رشته با دنباله مشخصی از کاراکترها شروع می‌شود یا خیر.
 
 حالا می‌توانیم تمام خطوط فایل را یکی‌یکی بخوانیم و فقط خطوط ویژه را نمایش دهیم:
 
-```
-for line in reader:
-    if is_special_line(line):
-        print(line.strip())
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    for line in reader:
+        if is_special_line(line):
+            print(line.strip())
+    ```
 
-```
-*** START OF THE PROJECT GUTENBERG EBOOK DRACULA ***
-*** END OF THE PROJECT GUTENBERG EBOOK DRACULA ***
-```
+    **Output:**
+
+    ```text
+    *** START OF THE PROJECT GUTENBERG EBOOK DRACULA ***
+    *** END OF THE PROJECT GUTENBERG EBOOK DRACULA ***
+    ```
 
 همان‌طور که می‌بینی، دو خط مشخص‌کننده ابتدا و انتهای متن را پیدا کردیم.
 
@@ -48,10 +54,12 @@ for line in reader:
 
 برای این کار، ابتدا باید فایل اصلی را دوباره برای خواندن باز کنیم و سپس فایل جدید را برای نوشتن ایجاد کنیم:
 
-```
-reader = open('pg345.txt')
-writer = open('pg345_cleaned.txt', 'w')
-```
+!!! example "Python"
+
+    ```python
+    reader = open('pg345.txt')
+    writer = open('pg345_cleaned.txt', 'w')
+    ```
 
 تابع `open()` علاوه بر نام فایل، یک پارامتر اختیاری به نام `mode` هم می‌گیرد که مشخص می‌کند فایل را با چه حالتی باز کنیم.
 
@@ -68,11 +76,13 @@ writer = open('pg345_cleaned.txt', 'w')
 
 اولین قدم این است که فایل را از ابتدا بخوانیم تا به اولین خط ویژه برسیم:
 
-```
-for line in reader:
-    if is_special_line(line):
-        break
-```
+!!! example "Python"
+
+    ```python
+    for line in reader:
+        if is_special_line(line):
+            break
+    ```
 
 اینجا با دستور `break` آشنا می‌شویم.
 
@@ -82,15 +92,17 @@ for line in reader:
 
 حالا یک نکته جالب: بعد از خروج از حلقه، متغیر `line` همچنان در دسترس است و آخرین مقداری را نگه می‌دارد که حلقه دریافت کرده بود؛ یعنی همان خط ویژه:
 
-```
-line
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    line
+    ```
 
-```
-'*** START OF THE PROJECT GUTENBERG EBOOK DRACULA ***\n'
-```
+    **Output:**
+
+    ```text
+    '*** START OF THE PROJECT GUTENBERG EBOOK DRACULA ***\n'
+    ```
 
 به کاراکتر `\n` در انتهای رشته دقت کن. این کاراکتر نشان‌دهنده پایان خط (Newline) است.
 
@@ -100,12 +112,14 @@ line
 
 حالا می‌توانیم حلقه دوم را اجرا کنیم تا متن اصلی را بخوانیم و در فایل جدید بنویسیم:
 
-```
-for line in reader:
-    if is_special_line(line):
-        break
-    writer.write(line)
-```
+!!! example "Python"
+
+    ```python
+    for line in reader:
+        if is_special_line(line):
+            break
+        writer.write(line)
+    ```
 
 در این حلقه، هر خط ابتدا بررسی می‌شود:
 
@@ -118,15 +132,17 @@ for line in reader:
 
 بعد از پایان حلقه، متغیر `line` شامل خط ویژه دوم خواهد بود:
 
-```
-line
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    line
+    ```
 
-```
-'*** END OF THE PROJECT GUTENBERG EBOOK DRACULA ***\n'
-```
+    **Output:**
+
+    ```text
+    '*** END OF THE PROJECT GUTENBERG EBOOK DRACULA ***\n'
+    ```
 
 ### بستن فایل‌ها
 
@@ -134,33 +150,37 @@ line
 
 اما وقتی کارمان با فایل‌ها تمام شد، بهتر است آن‌ها را ببندیم. برای این کار از متد `close()` استفاده می‌کنیم:
 
-```
-reader.close()
-writer.close()
-```
+!!! example "Python"
+
+    ```python
+    reader.close()
+    writer.close()
+    ```
 
 با فراخوانی این متد، فایل‌ها بسته می‌شوند و منابعی که برای باز نگه‌داشتن آن‌ها استفاده شده بود، آزاد می‌شوند.
 
 حالا برای اطمینان از اینکه عملیات با موفقیت انجام شده، می‌توانیم چند خط اول فایل جدید را بخوانیم:
 
-```
-for line in open('pg345_cleaned.txt'):
-    line = line.strip()
+!!! example "Python"
 
-    if len(line) > 0:
-        print(line)
+    ```python
+    for line in open('pg345_cleaned.txt'):
+        line = line.strip()
 
-    if line.endswith('Stoker'):
-        break
-```
+        if len(line) > 0:
+            print(line)
 
-خروجی:
+        if line.endswith('Stoker'):
+            break
+    ```
 
-```
-DRACULA
-_by_
-Bram Stoker
-```
+    **Output:**
+
+    ```text
+    DRACULA
+    _by_
+    Bram Stoker
+    ```
 
 در این مثال چند نکته وجود دارد:
 
@@ -191,20 +211,22 @@ Bram Stoker
 
 اول از همه، تعداد خطوط فایل پاک‌سازی‌شده را محاسبه می‌کنیم:
 
-```
-total = 0
+!!! example "Python"
 
-for line in open('pg345_cleaned.txt'):
-    total += 1
+    ```python
+    total = 0
 
-total
-```
+    for line in open('pg345_cleaned.txt'):
+        total += 1
 
-خروجی:
+    total
+    ```
 
-```
-15499
-```
+    **Output:**
+
+    ```text
+    15499
+    ```
 
 یعنی فایل ما شامل ۱۵٬۴۹۹ خط است.
 
@@ -216,21 +238,23 @@ total
 
 برای این کار می‌توانیم از عملگر `in` استفاده کنیم. قبلاً دیدیم که این عملگر بررسی می‌کند آیا یک دنباله از کاراکترها درون رشته دیگری وجود دارد یا خیر.
 
-```
-total = 0
+!!! example "Python"
 
-for line in open('pg345_cleaned.txt'):
-    if 'Jonathan' in line:
-        total += 1
+    ```python
+    total = 0
 
-total
-```
+    for line in open('pg345_cleaned.txt'):
+        if 'Jonathan' in line:
+            total += 1
 
-خروجی:
+    total
+    ```
 
-```
-199
-```
+    **Output:**
+
+    ```text
+    199
+    ```
 
 پس ۱۹۹ خط از فایل شامل نام `Jonathan` هستند.
 
@@ -248,20 +272,22 @@ total
 
 پس می‌توانیم کد قبلی را به این شکل تغییر دهیم:
 
-```
-total = 0
+!!! example "Python"
 
-for line in open('pg345_cleaned.txt'):
-    total += line.count('Jonathan')
+    ```python
+    total = 0
 
-total
-```
+    for line in open('pg345_cleaned.txt'):
+        total += line.count('Jonathan')
 
-خروجی:
+    total
+    ```
 
-```
-200
-```
+    **Output:**
+
+    ```text
+    200
+    ```
 
 حالا مشخص شد که نام `Jonathan` در مجموع ۲۰۰ بار در متن کتاب تکرار شده است.
 
@@ -280,9 +306,11 @@ total
 
 ساختار کلی آن به این شکل است:
 
-```
-string.replace(old, new)
-```
+!!! example "Python"
+
+    ```python
+    string.replace(old, new)
+    ```
 
 - `old`: عبارتی که می‌خواهیم پیدا و جایگزین کنیم.
     
@@ -291,13 +319,15 @@ string.replace(old, new)
 
 حالا می‌توانیم تمام موارد `Jonathan` را با `Thomas` جایگزین کنیم و نتیجه را در یک فایل جدید ذخیره کنیم:
 
-```
-writer = open('pg345_replaced.txt', 'w')
+!!! example "Python"
 
-for line in open('pg345_cleaned.txt'):
-    line = line.replace('Jonathan', 'Thomas')
-    writer.write(line)
-```
+    ```python
+    writer = open('pg345_replaced.txt', 'w')
+
+    for line in open('pg345_cleaned.txt'):
+        line = line.replace('Jonathan', 'Thomas')
+        writer.write(line)
+    ```
 
 در این کد چه اتفاقی می‌افتد؟
 
