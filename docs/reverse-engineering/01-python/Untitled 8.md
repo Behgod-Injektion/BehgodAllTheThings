@@ -92,9 +92,11 @@
 
 در نتیجه، این دستور هیچ‌وقت اجرا نخواهد شد:
 
-```
-return 'This is dead code'
-```
+!!! example "Python"
+
+    ```python
+    return 'This is dead code'
+    ```
 
 به کدی که تحت هیچ شرایطی اجرا نمی‌شود، **Dead Code** می‌گوییم.
 
