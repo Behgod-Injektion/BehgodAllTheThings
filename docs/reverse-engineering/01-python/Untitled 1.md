@@ -18,12 +18,10 @@ Spam, Spam,
 
 !!! example "Python"
 
-````
-```python
-def repeat(word, n):
-    print(word * n)
-```
-````
+    ```python
+    def repeat(word, n):
+        print(word * n)
+    ```
 
 پارامتر `word` کلمه یا رشته‌ای است که می‌خواهیم تکرار شود و `n` تعداد دفعات تکرار آن را مشخص می‌کند.
 
@@ -31,18 +29,16 @@ def repeat(word, n):
 
 !!! example "Python"
 
-````
-```python
-spam = 'Spam, '
-repeat(spam, 4)
-```
+    ```python
+    spam = 'Spam, '
+    repeat(spam, 4)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Spam, Spam, Spam, Spam,
-```
-````
+    ```text
+    Spam, Spam, Spam, Spam,
+    ```
 
 تابع `repeat()` مقدار `spam` را دریافت می‌کند و آن را چهار بار تکرار می‌کند.
 
@@ -50,93 +46,81 @@ Spam, Spam, Spam, Spam,
 
 !!! example "Python"
 
-````
-```python
-def first_two_lines():
-    repeat(spam, 4)
-    repeat(spam, 4)
-```
-````
+    ```python
+    def first_two_lines():
+        repeat(spam, 4)
+        repeat(spam, 4)
+    ```
 
 این تابع خودش دو بار تابع `repeat()` را فراخوانی می‌کند. برای اجرای آن کافی است بنویسیم:
 
 !!! example "Python"
 
-````
-```python
-first_two_lines()
-```
+    ```python
+    first_two_lines()
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Spam, Spam, Spam, Spam,
-Spam, Spam, Spam, Spam,
-```
-````
+    ```text
+    Spam, Spam, Spam, Spam,
+    Spam, Spam, Spam, Spam,
+    ```
 
 حالا نوبت سه خط آخر است. برای آن هم تابع جداگانه‌ای تعریف می‌کنیم:
 
 !!! example "Python"
 
-````
-```python
-def last_three_lines():
-    repeat(spam, 2)
-    print('(Lovely Spam, Wonderful Spam!)')
-    repeat(spam, 2)
-```
-````
+    ```python
+    def last_three_lines():
+        repeat(spam, 2)
+        print('(Lovely Spam, Wonderful Spam!)')
+        repeat(spam, 2)
+    ```
 
 با فراخوانی این تابع، سه خط موردنظر نمایش داده می‌شوند:
 
 !!! example "Python"
 
-````
-```python
-last_three_lines()
-```
+    ```python
+    last_three_lines()
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Spam, Spam,
-(Lovely Spam, Wonderful Spam!)
-Spam, Spam,
-```
-````
+    ```text
+    Spam, Spam,
+    (Lovely Spam, Wonderful Spam!)
+    Spam, Spam,
+    ```
 
 خب، حالا دو بخش ترانه را داریم. می‌توانیم با تعریف یک تابع دیگر، همهٔ آن‌ها را به هم متصل کنیم:
 
 !!! example "Python"
 
-````
-```python
-def print_verse():
-    first_two_lines()
-    last_three_lines()
-```
-````
+    ```python
+    def print_verse():
+        first_two_lines()
+        last_three_lines()
+    ```
 
 این تابع دو تابع قبلی را به ترتیب فراخوانی می‌کند. برای نمایش کل ترانه هم کافی است آن را اجرا کنیم:
 
 !!! example "Python"
 
-````
-```python
-print_verse()
-```
+    ```python
+    print_verse()
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Spam, Spam, Spam, Spam,
-Spam, Spam, Spam, Spam,
-Spam, Spam,
-(Lovely Spam, Wonderful Spam!)
-Spam, Spam,
-```
-````
+    ```text
+    Spam, Spam, Spam, Spam,
+    Spam, Spam, Spam, Spam,
+    Spam, Spam,
+    (Lovely Spam, Wonderful Spam!)
+    Spam, Spam,
+    ```
 
 ### چند تابع، یک جریان اجرا
 
@@ -169,19 +153,17 @@ Spam, Spam,
 
 !!! example "Python"
 
-````
-```python
-for i in range(2):
-    print(i)
-```
+    ```python
+    for i in range(2):
+        print(i)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-0
-1
-```
-````
+    ```text
+    0
+    1
+    ```
 
 ساختار این کد را بررسی کنیم.
 
@@ -229,32 +211,30 @@ for i in range(2):
 
 !!! example "Python"
 
-````
-```python
-for i in range(2):
-    print("Verse", i)
-    print_verse()
-    print()
-```
+    ```python
+    for i in range(2):
+        print("Verse", i)
+        print_verse()
+        print()
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Verse 0
-Spam, Spam, Spam, Spam,
-Spam, Spam, Spam, Spam,
-Spam, Spam,
-(Lovely Spam, Wonderful Spam!)
-Spam, Spam,
+    ```text
+    Verse 0
+    Spam, Spam, Spam, Spam,
+    Spam, Spam, Spam, Spam,
+    Spam, Spam,
+    (Lovely Spam, Wonderful Spam!)
+    Spam, Spam,
 
-Verse 1
-Spam, Spam, Spam, Spam,
-Spam, Spam, Spam, Spam,
-Spam, Spam,
-(Lovely Spam, Wonderful Spam!)
-Spam, Spam,
-```
-````
+    Verse 1
+    Spam, Spam, Spam, Spam,
+    Spam, Spam, Spam, Spam,
+    Spam, Spam,
+    (Lovely Spam, Wonderful Spam!)
+    Spam, Spam,
+    ```
 
 در این مثال، حلقه دو بار اجرا می‌شود. در هر تکرار:
 
@@ -273,14 +253,12 @@ Spam, Spam,
 
 !!! example "Python"
 
-````
-```python
-def print_n_verses(n):
-    for i in range(n):
-        print_verse()
-        print()
-```
-````
+    ```python
+    def print_n_verses(n):
+        for i in range(n):
+            print_verse()
+            print()
+    ```
 
 حالا این تابع می‌تواند با دریافت یک عدد صحیح، همان تعداد بیت را نمایش دهد.
 
