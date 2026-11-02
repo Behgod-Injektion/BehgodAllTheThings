@@ -8,12 +8,10 @@
 
 !!! example "Python"
 
-````
-```python
-a = 'banana'
-b = 'banana'
-```
-````
+    ```python
+    a = 'banana'
+    b = 'banana'
+    ```
 
 در این حالت دو وضعیت ممکن است وجود داشته باشد:
 
@@ -26,19 +24,17 @@ b = 'banana'
 
 !!! example "Python"
 
-````
-```python
-a = 'banana'
-b = 'banana'
-a is b
-```
+    ```python
+    a = 'banana'
+    b = 'banana'
+    a is b
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 در این مثال، Python از یک شیء رشته‌ای استفاده کرده و هر دو متغیر `a` و `b` به همان شیء اشاره می‌کنند.
 
@@ -46,19 +42,17 @@ True
 
 !!! example "Python"
 
-````
-```python
-a = [1, 2, 3]
-b = [1, 2, 3]
-a is b
-```
+    ```python
+    a = [1, 2, 3]
+    b = [1, 2, 3]
+    a is b
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 چرا نتیجه `False` شد؟ چون با وجود اینکه عناصر دو لیست یکسان هستند، هر کدام یک شیء مستقل محسوب می‌شوند.
 
@@ -83,19 +77,17 @@ False
 
 !!! example "Python"
 
-````
-```python
-a = [1, 2, 3]
-b = a
-b is a
-```
+    ```python
+    a = [1, 2, 3]
+    b = a
+    b is a
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 این بار نتیجه `True` است؛ چون با اجرای `b = a` یک لیست جدید نساخته‌ایم. فقط متغیر `b` را به همان شیئی متصل کرده‌ایم که `a` به آن اشاره می‌کند.
 
@@ -113,18 +105,16 @@ True
 
 !!! example "Python"
 
-````
-```python
-b[0] = 5
-a
-```
+    ```python
+    b[0] = 5
+    a
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-[5, 2, 3]
-```
-````
+    ```text
+    [5, 2, 3]
+    ```
 
 ما با استفاده از `b` عنصر اول لیست را تغییر دادیم؛ اما وقتی مقدار `a` را بررسی می‌کنیم، می‌بینیم که آن هم تغییر کرده است!
 
@@ -140,12 +130,10 @@ a
 
 !!! example "Python"
 
-````
-```python
-a = 'banana'
-b = 'banana'
-```
-````
+    ```python
+    a = 'banana'
+    b = 'banana'
+    ```
 
 فرقی نمی‌کند `a` و `b` به یک شیء رشته‌ای اشاره کنند یا دو شیء جداگانه؛ چون رشته‌ها تغییرناپذیر هستند و نمی‌توانیم محتوای شیء اصلی را از طریق یکی از این ارجاع‌ها تغییر دهیم.
 
@@ -159,29 +147,25 @@ b = 'banana'
 
 !!! example "Python"
 
-````
-```python
-def pop_first(lst):
-    return lst.pop(0)
-```
-````
+    ```python
+    def pop_first(lst):
+        return lst.pop(0)
+    ```
 
 حالا می‌توانیم این تابع را به شکل زیر فراخوانی کنیم:
 
 !!! example "Python"
 
-````
-```python
-letters = ['a', 'b', 'c']
-pop_first(letters)
-```
+    ```python
+    letters = ['a', 'b', 'c']
+    pop_first(letters)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'a'
-```
-````
+    ```text
+    'a'
+    ```
 
 مقدار بازگشتی تابع، اولین عنصر لیست یعنی `'a'` است؛ همان عنصری که از لیست حذف شده است.
 
@@ -189,17 +173,15 @@ pop_first(letters)
 
 !!! example "Python"
 
-````
-```python
-letters
-```
+    ```python
+    letters
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['b', 'c']
-```
-````
+    ```text
+    ['b', 'c']
+    ```
 
 می‌بینی؟ عنصر اول حذف شده و تغییرات در متغیر اصلی هم قابل مشاهده است.
 
