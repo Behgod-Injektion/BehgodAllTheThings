@@ -8,35 +8,31 @@
 
 !!! example "Python"
 
-````
-```python
-x = 5
-x
-```
+    ```python
+    x = 5
+    x
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-5
-```
-````
+    ```text
+    5
+    ```
 
 حالا می‌توانیم مقدار جدیدی به همان متغیر اختصاص دهیم:
 
 !!! example "Python"
 
-````
-```python
-x = 7
-x
-```
+    ```python
+    x = 7
+    x
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-7
-```
-````
+    ```text
+    7
+    ```
 
 اگر این دو انتساب را در یک نمودار وضعیت (State Diagram) نمایش دهیم، ابتدا متغیر `x` به مقدار `5` اشاره می‌کند و بعد از انتساب دوم، به مقدار `7` اشاره خواهد کرد.
 
@@ -50,18 +46,16 @@ x
 
 !!! example "Python"
 
-````
-```python
-x = x + 1
-x
-```
+    ```python
+    x = x + 1
+    x
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-8
-```
-````
+    ```text
+    8
+    ```
 
 این دستور یعنی:
 
@@ -80,17 +74,15 @@ x
 
 !!! example "Python"
 
-````
-```python
-y = y + 1
-```
+    ```python
+    y = y + 1
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-NameError: name 'y' is not defined
-```
-````
+    ```text
+    NameError: name 'y' is not defined
+    ```
 
 چرا؟
 
@@ -100,19 +92,17 @@ NameError: name 'y' is not defined
 
 !!! example "Python"
 
-````
-```python
-y = 0
-y = y + 1
-y
-```
+    ```python
+    y = 0
+    y = y + 1
+    y
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-1
-```
-````
+    ```text
+    1
+    ```
 
 به این ترتیب، ابتدا `y` را با مقدار صفر ایجاد کردیم و سپس مقدار آن را یک واحد افزایش دادیم.
 
@@ -130,15 +120,13 @@ y
 
 !!! example "Python"
 
-````
-```python
-total = 0
+    ```python
+    total = 0
 
-for line in open('words.txt'):
-    word = line.strip()
-    total = total + 1
-```
-````
+    for line in open('words.txt'):
+        word = line.strip()
+        total = total + 1
+    ```
 
 در ابتدای برنامه، `total` برابر صفر است.
 
@@ -148,17 +136,15 @@ for line in open('words.txt'):
 
 !!! example "Python"
 
-````
-```python
-total
-```
+    ```python
+    total
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-113783
-```
-````
+    ```text
+    113783
+    ```
 
 به متغیری که برای شمارش تعداد دفعات وقوع یک اتفاق استفاده می‌شود، **Counter** یا «شمارنده» می‌گوییم.
 
@@ -170,19 +156,17 @@ total
 
 !!! example "Python"
 
-````
-```python
-total = 0
-count = 0
+    ```python
+    total = 0
+    count = 0
 
-for line in open('words.txt'):
-    word = line.strip()
-    total = total + 1
+    for line in open('words.txt'):
+        word = line.strip()
+        total = total + 1
 
-    if has_e(word):
-        count = count + 1
-```
-````
+        if has_e(word):
+            count = count + 1
+    ```
 
 این برنامه دو کار انجام می‌دهد:
 
@@ -197,33 +181,29 @@ for line in open('words.txt'):
 
 !!! example "Python"
 
-````
-```python
-count
-```
+    ```python
+    count
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-76162
-```
-````
+    ```text
+    76162
+    ```
 
 حالا می‌توانیم نسبت کلماتی را که شامل `e` هستند به کل کلمات، به‌صورت درصد محاسبه کنیم:
 
 !!! example "Python"
 
-````
-```python
-count / total * 100
-```
+    ```python
+    count / total * 100
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-66.93618554617122
-```
-````
+    ```text
+    66.93618554617122
+    ```
 
 یعنی تقریباً دو سوم کلمات موجود در این فهرست شامل حرف `e` هستند.
 
@@ -241,18 +221,16 @@ Python عملگری به نام `in` دارد که بررسی می‌کند آی
 
 !!! example "Python"
 
-````
-```python
-word = 'Gadsby'
-'e' in word
-```
+    ```python
+    word = 'Gadsby'
+    'e' in word
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 چون حرف `e` در رشته `Gadsby` وجود ندارد، نتیجه `False` است.
 
@@ -260,15 +238,13 @@ False
 
 !!! example "Python"
 
-````
-```python
-def has_e(word):
-    if 'E' in word or 'e' in word:
-        return True
-    else:
-        return False
-```
-````
+    ```python
+    def has_e(word):
+        if 'E' in word or 'e' in word:
+            return True
+        else:
+            return False
+    ```
 
 اما یک نکته وجود دارد: شرط `if` خودش یک مقدار بولی (`True` یا `False`) تولید می‌کند. پس چرا همان مقدار را مستقیماً برنگردانیم؟
 
@@ -276,12 +252,10 @@ def has_e(word):
 
 !!! example "Python"
 
-````
-```python
-def has_e(word):
-    return 'E' in word or 'e' in word
-```
-````
+    ```python
+    def has_e(word):
+        return 'E' in word or 'e' in word
+    ```
 
 این نسخه دقیقاً همان رفتار نسخه قبلی را دارد، اما ساده‌تر و خواناتر است.
 
@@ -295,17 +269,15 @@ def has_e(word):
 
 !!! example "Python"
 
-````
-```python
-word.lower()
-```
+    ```python
+    word.lower()
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'gadsby'
-```
-````
+    ```text
+    'gadsby'
+    ```
 
 اما یک نکته مهم: متد `lower()` یک رشته جدید ایجاد می‌کند و رشته اصلی را تغییر نمی‌دهد.
 
@@ -313,17 +285,15 @@ word.lower()
 
 !!! example "Python"
 
-````
-```python
-word
-```
+    ```python
+    word
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'Gadsby'
-```
-````
+    ```text
+    'Gadsby'
+    ```
 
 همان‌طور که می‌بینی، مقدار اصلی همچنان `Gadsby` است.
 
@@ -331,12 +301,10 @@ word
 
 !!! example "Python"
 
-````
-```python
-def has_e(word):
-    return 'e' in word.lower()
-```
-````
+    ```python
+    def has_e(word):
+        return 'e' in word.lower()
+    ```
 
 به این ترتیب، دیگر نیازی نیست جداگانه حروف بزرگ و کوچک را بررسی کنیم.
 
@@ -344,32 +312,28 @@ def has_e(word):
 
 !!! example "Python"
 
-````
-```python
-has_e('Gadsby')
-```
+    ```python
+    has_e('Gadsby')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 و:
 
 !!! example "Python"
 
-````
-```python
-has_e('Emma')
-```
+    ```python
+    has_e('Emma')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 به همین سادگی، با ترکیب دو قابلیت `in` و `lower()` توانستیم تابعی کوتاه‌تر و خواناتر بنویسیم که بدون توجه به بزرگ یا کوچک بودن حروف، وجود `e` را در رشته بررسی می‌کند.
