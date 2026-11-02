@@ -8,13 +8,11 @@
 
 !!! example "Python"
 
-````
-```python
-def cat_twice(part1, part2):
-    cat = part1 + part2
-    print_twice(cat)
-```
-````
+    ```python
+    def cat_twice(part1, part2):
+        cat = part1 + part2
+        print_twice(cat)
+    ```
 
 این تابع دو پارامتر به نام‌های `part1` و `part2` دریافت می‌کند، آن‌ها را به هم متصل می‌کند و نتیجه را در متغیر `cat` قرار می‌دهد. سپس `print_twice()` را فراخوانی می‌کند تا نتیجه را دو بار نمایش دهد.
 
@@ -22,21 +20,19 @@ def cat_twice(part1, part2):
 
 !!! example "Python"
 
-````
-```python
-line1 = 'Always look on the '
-line2 = 'bright side of life.'
+    ```python
+    line1 = 'Always look on the '
+    line2 = 'bright side of life.'
 
-cat_twice(line1, line2)
-```
+    cat_twice(line1, line2)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Always look on the bright side of life.
-Always look on the bright side of life.
-```
-````
+    ```text
+    Always look on the bright side of life.
+    Always look on the bright side of life.
+    ```
 
 وقتی `cat_twice()` اجرا می‌شود، متغیر محلی `cat` ساخته می‌شود و مقدار حاصل از اتصال دو رشته را نگه می‌دارد.
 
@@ -44,17 +40,15 @@ Always look on the bright side of life.
 
 !!! example "Python"
 
-````
-```python
-print(cat)
-```
+    ```python
+    print(cat)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-NameError: name 'cat' is not defined
-```
-````
+    ```text
+    NameError: name 'cat' is not defined
+    ```
 
 دلیل خطا ساده است: متغیر `cat` فقط داخل تابع `cat_twice()` تعریف شده و خارج از محدودهٔ آن شناخته‌شده نیست.
 
@@ -117,13 +111,11 @@ cat_twice(line1, line2)
 
 !!! example "Python"
 
-````
-```python
-def print_twice(string):
-    print(cat)  # NameError
-    print(cat)
-```
-````
+    ```python
+    def print_twice(string):
+        print(cat)  # NameError
+        print(cat)
+    ```
 
 در این تابع تلاش کرده‌ایم متغیر `cat` را چاپ کنیم؛ اما همان‌طور که دیدیم، `cat` یک متغیر محلی در تابع دیگری است و در اینجا به آن دسترسی نداریم.
 
@@ -131,23 +123,21 @@ def print_twice(string):
 
 !!! example "Python"
 
-````
-```python
-cat_twice(line1, line2)
-```
+    ```python
+    cat_twice(line1, line2)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Traceback (most recent call last):
-    File "<string>:2
-    Cell In[21], line 3 in cat_twice
-      print_twice(cat)
-    Cell In[26], line 2 in print_twice
-      print(cat)  # NameError
-NameError: name 'cat' is not defined
-```
-````
+    ```text
+    Traceback (most recent call last):
+        File "<string>:2
+        Cell In[21], line 3 in cat_twice
+          print_twice(cat)
+        Cell In[26], line 2 in print_twice
+          print(cat)  # NameError
+    NameError: name 'cat' is not defined
+    ```
 
 ممکن است جزئیات و شماره‌خط‌های خروجی در محیط‌های مختلف کمی متفاوت باشند، اما ساختار کلی Traceback همین است.
 
