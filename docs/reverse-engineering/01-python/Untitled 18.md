@@ -6,9 +6,11 @@
 
 برای بررسی این موضوع، می‌توانیم از یک الگوی Regex استفاده کنیم که هر دو شکل `centre` و `center` را تشخیص دهد:
 
-```
-pattern = 'cent(er|re)'
-```
+!!! example "Python"
+
+    ```python
+    pattern = 'cent(er|re)'
+    ```
 
 شاید بپرسی چرا این بار از پرانتز استفاده کرده‌ایم؟
 
@@ -20,23 +22,27 @@ pattern = 'cent(er|re)'
 
 در نتیجه، هر دو کلمه زیر با این الگو مطابقت دارند:
 
-```
-center
-centre
-```
+!!! example "Python"
+
+    ```python
+    center
+    centre
+    ```
 
 حالا می‌توانیم اولین موردی را که با این الگو مطابقت دارد در کتاب پیدا کنیم:
 
-```
-result = find_first(pattern)
-result.string
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    result = find_first(pattern)
+    result.string
+    ```
 
-```
-'horseshoe of the Carpathians, as if it were the centre of some sort of\n'
-```
+    **Output:**
+
+    ```text
+    'horseshoe of the Carpathians, as if it were the centre of some sort of\n'
+    ```
 
 همان‌طور که می‌بینی، شکل بریتانیایی کلمه، یعنی `centre`، در متن استفاده شده است.
 
@@ -50,32 +56,38 @@ result.string
 
 برای مثال:
 
-```
-pattern = 'colou?r'
-```
+!!! example "Python"
+
+    ```python
+    pattern = 'colou?r'
+    ```
 
 در این الگو، علامت `?` بعد از `u` قرار گرفته است. بنابراین وجود حرف `u` اختیاری خواهد بود.
 
 در نتیجه، الگوی ما هر دو شکل زیر را تشخیص می‌دهد:
 
-```
-colour
-color
-```
+!!! example "Python"
+
+    ```python
+    colour
+    color
+    ```
 
 حالا اولین خطی را پیدا کنیم که با این الگو مطابقت دارد:
 
-```
-result = find_first(pattern)
-line = result.string
-line
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    result = find_first(pattern)
+    line = result.string
+    line
+    ```
 
-```
-'undergarment with long double apron, front, and back, of coloured stuff\n'
-```
+    **Output:**
+
+    ```text
+    'undergarment with long double apron, front, and back, of coloured stuff\n'
+    ```
 
 باز هم مشخص شد که Stoker از املای بریتانیایی استفاده کرده است.
 
@@ -89,15 +101,17 @@ line
 
 مثلاً:
 
-```
-re.sub(pattern, 'color', line)
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    re.sub(pattern, 'color', line)
+    ```
 
-```
-'undergarment with long double apron, front, and back, of colored stuff\n'
-```
+    **Output:**
+
+    ```text
+    'undergarment with long double apron, front, and back, of colored stuff\n'
+    ```
 
 تابع `sub()` در این مثال سه آرگومان دریافت می‌کند:
 
@@ -124,17 +138,21 @@ re.sub(pattern, 'color', line)
 
 در Jupyter می‌توانیم آن را به این شکل اجرا کنیم:
 
-```
-!head pg345_cleaned.txt
-```
+!!! example "Python"
+
+    ```python
+    !head pg345_cleaned.txt
+    ```
 
 علامت `!` در ابتدای دستور نشان می‌دهد که قرار نیست این دستور توسط Python اجرا شود؛ بلکه یک دستور Shell است که از داخل محیط Jupyter اجرا می‌شود.
 
 به همین شکل، دستور `tail` چند خط انتهایی فایل را نمایش می‌دهد:
 
-```
-!tail pg345_cleaned.txt
-```
+!!! example "Python"
+
+    ```python
+    !tail pg345_cleaned.txt
+    ```
 
 این دو دستور هنگام بررسی فایل‌های متنی بسیار کاربردی هستند؛ چون لازم نیست برای دیدن ابتدای یا انتهای یک فایل بزرگ، تمام محتوای آن را چاپ کنیم.
 
@@ -148,9 +166,11 @@ re.sub(pattern, 'color', line)
 
 برای این کار از عملگر `>` استفاده می‌شود که خروجی یک دستور را به فایل هدایت می‌کند.
 
-```
-!head pg345_cleaned.txt > pg345_cleaned_10_lines.txt
-```
+!!! example "Python"
+
+    ```python
+    !head pg345_cleaned.txt > pg345_cleaned_10_lines.txt
+    ```
 
 به‌صورت پیش‌فرض، دستور `head` ده خط اول فایل را می‌خواند. بنابراین دستور بالا ده خط ابتدایی فایل اصلی را در فایل جدیدی به نام `pg345_cleaned_10_lines.txt` ذخیره می‌کند.
 
@@ -158,9 +178,11 @@ re.sub(pattern, 'color', line)
 
 مثلاً برای ذخیره صد خط اول:
 
-```
-!head -100 pg345_cleaned.txt > pg345_cleaned_100_lines.txt
-```
+!!! example "Python"
+
+    ```python
+    !head -100 pg345_cleaned.txt > pg345_cleaned_100_lines.txt
+    ```
 
 در این دستور:
 

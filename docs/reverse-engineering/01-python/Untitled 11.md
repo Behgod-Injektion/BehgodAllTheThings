@@ -20,18 +20,16 @@
 
 !!! example "Python"
 
-````
-```python
-for i in range(3):
-    print(i, end=' ')
-```
+    ```python
+    for i in range(3):
+        print(i, end=' ')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-0 1 2
-```
-````
+    ```text
+    0 1 2
+    ```
 
 در این مثال از آرگومان نام‌گذاری‌شده `end` استفاده کرده‌ایم. به‌طور پیش‌فرض، تابع `print()` بعد از نمایش هر مقدار به خط بعد می‌رود؛ اما با تعیین `end=' '`، به‌جای رفتن به خط بعد، یک فاصله بعد از هر عدد قرار می‌دهد.
 
@@ -39,18 +37,16 @@ for i in range(3):
 
 !!! example "Python"
 
-````
-```python
-for letter in 'Gadsby':
-    print(letter, end=' ')
-```
+    ```python
+    for letter in 'Gadsby':
+        print(letter, end=' ')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-G a d s b y
-```
-````
+    ```text
+    G a d s b y
+    ```
 
 دقت کن که این بار نام متغیر را از `i` به `letter` تغییر دادیم.
 
@@ -62,13 +58,11 @@ G a d s b y
 
 !!! example "Python"
 
-````
-```python
-for letter in "Gadsby":
-    if letter == 'E' or letter == 'e':
-        print('This word has an "e"')
-```
-````
+    ```python
+    for letter in "Gadsby":
+        if letter == 'E' or letter == 'e':
+            print('This word has an "e"')
+    ```
 
 در این مثال، تمام حروف رشته بررسی می‌شوند. اگر حرف فعلی برابر `E` یا `e` باشد، پیام موردنظر نمایش داده می‌شود.
 
@@ -78,12 +72,14 @@ for letter in "Gadsby":
 
 قبل از ادامه، بهتر است این حلقه را داخل یک تابع قرار دهیم:
 
-```
-def has_e():
-    for letter in "Gadsby":
-        if letter == 'E' or letter == 'e':
-            print('This word has an "e"')
-```
+!!! example "Python"
+
+    ```python
+    def has_e():
+        for letter in "Gadsby":
+            if letter == 'E' or letter == 'e':
+                print('This word has an "e"')
+    ```
 
 اما هنوز یک مشکل داریم: تابع ما فقط پیام نمایش می‌دهد و نتیجه مشخصی برنمی‌گرداند.
 
@@ -91,16 +87,14 @@ def has_e():
 
 !!! example "Python"
 
-````
-```python
-def has_e():
-    for letter in "Gadsby":
-        if letter == 'E' or letter == 'e':
-            return True
+    ```python
+    def has_e():
+        for letter in "Gadsby":
+            if letter == 'E' or letter == 'e':
+                return True
 
-    return False
-```
-````
+        return False
+    ```
 
 اینجا یک نکته مهم وجود دارد: اگر حرف `e` پیدا شود، تابع بلافاصله با `return True` تمام می‌شود. اما اگر حلقه تمام شود و هیچ‌کدام از حروف با `e` یا `E` برابر نباشند، اجرای تابع به `return False` می‌رسد.
 
@@ -108,16 +102,14 @@ def has_e():
 
 !!! example "Python"
 
-````
-```python
-def has_e(word):
-    for letter in word:
-        if letter == 'E' or letter == 'e':
-            return True
+    ```python
+    def has_e(word):
+        for letter in word:
+            if letter == 'E' or letter == 'e':
+                return True
 
-    return False
-```
-````
+        return False
+    ```
 
 به این ترتیب، تابع دیگر به یک کلمه خاص محدود نیست و می‌توانیم آن را برای رشته‌های مختلف استفاده کنیم.
 
@@ -125,33 +117,29 @@ def has_e(word):
 
 !!! example "Python"
 
-````
-```python
-has_e('Gadsby')
-```
+    ```python
+    has_e('Gadsby')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 و:
 
 !!! example "Python"
 
-````
-```python
-has_e('Emma')
-```
+    ```python
+    has_e('Emma')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 به همین سادگی، تابعی نوشته‌ایم که می‌تواند وجود یک حرف مشخص را در هر رشته‌ای بررسی کند.
 
@@ -169,11 +157,9 @@ True
 
 !!! example "Python"
 
-````
-```python
-file_object = open('words.txt')
-```
-````
+    ```python
+    file_object = open('words.txt')
+    ```
 
 در اینجا، شیء فایل برگشتی از `open()` را در متغیر `file_object` ذخیره کرده‌ایم.
 
@@ -183,17 +169,15 @@ file_object = open('words.txt')
 
 !!! example "Python"
 
-````
-```python
-file_object.readline()
-```
+    ```python
+    file_object.readline()
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'aa\n'
-```
-````
+    ```text
+    'aa\n'
+    ```
 
 شاید متوجه شده باشی که نحوه فراخوانی `readline()` با توابعی که تا الان دیده‌ایم کمی متفاوت است.
 
@@ -201,9 +185,11 @@ file_object.readline()
 
 متد در واقع تابعی است که به یک شیء تعلق دارد. در این مثال، متد `readline()` متعلق به شیء فایل است؛ بنابراین برای فراخوانی آن، ابتدا نام شیء را می‌نویسیم، سپس از عملگر نقطه (`.`) و در نهایت نام متد استفاده می‌کنیم:
 
-```
-file_object.readline()
-```
+!!! example "Python"
+
+    ```python
+    file_object.readline()
+    ```
 
 اولین کلمه موجود در فهرست، `aa` است که نام نوعی گدازه محسوب می‌شود.
 
@@ -215,18 +201,16 @@ file_object.readline()
 
 !!! example "Python"
 
-````
-```python
-line = file_object.readline()
-line
-```
+    ```python
+    line = file_object.readline()
+    line
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'aah\n'
-```
-````
+    ```text
+    'aah\n'
+    ```
 
 پس در اولین فراخوانی، `aa` و در فراخوانی بعدی، `aah` را دریافت کردیم.
 
@@ -238,18 +222,16 @@ line
 
 !!! example "Python"
 
-````
-```python
-word = line.strip()
-word
-```
+    ```python
+    word = line.strip()
+    word
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'aah'
-```
-````
+    ```text
+    'aah'
+    ```
 
 همان‌طور که می‌بینی، `\n` دیگر در انتهای رشته وجود ندارد.
 
@@ -263,13 +245,11 @@ word
 
 !!! example "Python"
 
-````
-```python
-for line in open('words.txt'):
-    word = line.strip()
-    print(word)
-```
-````
+    ```python
+    for line in open('words.txt'):
+        word = line.strip()
+        print(word)
+    ```
 
 در هر تکرار:
 

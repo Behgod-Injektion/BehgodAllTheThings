@@ -6,23 +6,21 @@
 
 !!! example "Python"
 
-````
-```python
-if x == y:
-    print('x and y are equal')
-else:
-    if x < y:
-        print('x is less than y')
+    ```python
+    if x == y:
+        print('x and y are equal')
     else:
-        print('x is greater than y')
-```
+        if x < y:
+            print('x is less than y')
+        else:
+            print('x is greater than y')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-x is less than y
-```
-````
+    ```text
+    x is less than y
+    ```
 
 در این مثال، شرط بیرونی (`if`) دو شاخه دارد:
 
@@ -41,19 +39,17 @@ x is less than y
 
 !!! example "Python"
 
-````
-```python
-if 0 < x:
-    if x < 10:
-        print('x is a positive single-digit number.')
-```
+    ```python
+    if 0 < x:
+        if x < 10:
+            print('x is a positive single-digit number.')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-x is a positive single-digit number.
-```
-````
+    ```text
+    x is a positive single-digit number.
+    ```
 
 دستور `print` فقط زمانی اجرا می‌شود که هر دو شرط برقرار باشند:
 
@@ -66,25 +62,25 @@ x is a positive single-digit number.
 
 !!! example "Python"
 
-````
-```python
-if 0 < x and x < 10:
-    print('x is a positive single-digit number.')
-```
+    ```python
+    if 0 < x and x < 10:
+        print('x is a positive single-digit number.')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-x is a positive single-digit number.
-```
-````
+    ```text
+    x is a positive single-digit number.
+    ```
 
 اما صبر کن! پایتون برای چنین شرایطی یک روش حتی خلاصه‌تر هم دارد: **Chained Comparisons** یا مقایسه‌های زنجیره‌ای.
 
-```
-if 0 < x < 10:
-    print('x is a positive single-digit number.')
-```
+!!! example "Python"
+
+    ```python
+    if 0 < x < 10:
+        print('x is a positive single-digit number.')
+    ```
 
 این عبارت دقیقاً همان معنی دو مقایسه‌ای را دارد که با `and` به هم متصل شده‌اند. یعنی مقدار `x` باید هم‌زمان بزرگ‌تر از صفر و کوچک‌تر از ۱۰ باشد.
 
@@ -100,16 +96,14 @@ if 0 < x < 10:
 
 !!! example "Python"
 
-````
-```python
-def countdown(n):
-    if n <= 0:
-        print('Blastoff!')
-    else:
-        print(n)
-        countdown(n - 1)
-```
-````
+    ```python
+    def countdown(n):
+        if n <= 0:
+            print('Blastoff!')
+        else:
+            print(n)
+            countdown(n - 1)
+    ```
 
 در این تابع، ابتدا بررسی می‌کنیم که آیا `n` کوچک‌تر یا مساوی صفر است یا نه.
 
@@ -122,20 +116,18 @@ def countdown(n):
 
 !!! example "Python"
 
-````
-```python
-countdown(3)
-```
+    ```python
+    countdown(3)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-3
-2
-1
-Blastoff!
-```
-````
+    ```text
+    3
+    2
+    1
+    Blastoff!
+    ```
 
 بیایید اجرای برنامه را مرحله‌به‌مرحله دنبال کنیم:
 
@@ -162,14 +154,12 @@ Blastoff!
 
 !!! example "Python"
 
-````
-```python
-def print_n_times(string, n):
-    if n > 0:
-        print(string)
-        print_n_times(string, n - 1)
-```
-````
+    ```python
+    def print_n_times(string, n):
+        if n > 0:
+            print(string)
+            print_n_times(string, n - 1)
+    ```
 
 منطق تابع ساده است:
 
@@ -182,20 +172,18 @@ def print_n_times(string, n):
 
 !!! example "Python"
 
-````
-```python
-print_n_times('Spam ', 4)
-```
+    ```python
+    print_n_times('Spam ', 4)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Spam
-Spam
-Spam
-Spam
-```
-````
+    ```text
+    Spam
+    Spam
+    Spam
+    Spam
+    ```
 
 البته برای مثال ساده‌ای مثل این، احتمالاً استفاده از یک `for` loop راحت‌تر است. اما جلوتر با مسائلی روبه‌رو می‌شویم که پیاده‌سازی آن‌ها با حلقه دشوار است، در حالی که با Recursion می‌توانیم راه‌حل ساده‌تری برایشان بنویسیم.
 

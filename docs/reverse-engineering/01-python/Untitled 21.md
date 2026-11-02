@@ -8,19 +8,17 @@
 
 !!! example "Python"
 
-````
-```python
-s = 'spam'
-t = list(s)
-t
-```
+    ```python
+    s = 'spam'
+    t = list(s)
+    t
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['s', 'p', 'a', 'm']
-```
-````
+    ```text
+    ['s', 'p', 'a', 'm']
+    ```
 
 تابع `list()` رشته را به کاراکترهای جداگانه تقسیم می‌کند و هر کاراکتر را به‌عنوان یک عنصر در لیست قرار می‌دهد.
 
@@ -30,19 +28,17 @@ t
 
 !!! example "Python"
 
-````
-```python
-s = 'pining for the fjords'
-t = s.split()
-t
-```
+    ```python
+    s = 'pining for the fjords'
+    t = s.split()
+    t
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['pining', 'for', 'the', 'fjords']
-```
-````
+    ```text
+    ['pining', 'for', 'the', 'fjords']
+    ```
 
 متد `split()` رشته را به بخش‌های جداگانه تقسیم می‌کند و نتیجه را به شکل یک لیست برمی‌گرداند.
 
@@ -56,19 +52,17 @@ t
 
 !!! example "Python"
 
-````
-```python
-s = 'ex-parrot'
-t = s.split('-')
-t
-```
+    ```python
+    s = 'ex-parrot'
+    t = s.split('-')
+    t
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['ex', 'parrot']
-```
-````
+    ```text
+    ['ex', 'parrot']
+    ```
 
 در این مثال، کاراکتر `-` به‌عنوان جداکننده استفاده شده است؛ بنابراین رشته از محل خط تیره به دو بخش تقسیم می‌شود.
 
@@ -80,20 +74,18 @@ t
 
 !!! example "Python"
 
-````
-```python
-delimiter = ' '
-t = ['pining', 'for', 'the', 'fjords']
-s = delimiter.join(t)
-s
-```
+    ```python
+    delimiter = ' '
+    t = ['pining', 'for', 'the', 'fjords']
+    s = delimiter.join(t)
+    s
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'pining for the fjords'
-```
-````
+    ```text
+    'pining for the fjords'
+    ```
 
 در این مثال، مقدار `delimiter` یک کاراکتر فاصله است؛ بنابراین `join()` کلمات را با یک فاصله به یکدیگر متصل می‌کند.
 
@@ -107,20 +99,18 @@ s
 
 !!! example "Python"
 
-````
-```python
-for cheese in cheeses:
-    print(cheese)
-```
+    ```python
+    for cheese in cheeses:
+        print(cheese)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Cheddar
-Edam
-Gouda
-```
-````
+    ```text
+    Cheddar
+    Edam
+    Gouda
+    ```
 
 در هر تکرار، متغیر `cheese` یکی از عناصر لیست را دریافت می‌کند و دستور `print()` مقدار آن را نمایش می‌دهد.
 
@@ -128,23 +118,21 @@ Gouda
 
 !!! example "Python"
 
-````
-```python
-s = 'pining for the fjords'
+    ```python
+    s = 'pining for the fjords'
 
-for word in s.split():
-    print(word)
-```
+    for word in s.split():
+        print(word)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-pining
-for
-the
-fjords
-```
-````
+    ```text
+    pining
+    for
+    the
+    fjords
+    ```
 
 همان‌طور که می‌بینی، لازم نیست حتماً لیست را از قبل در یک متغیر ذخیره کنیم. می‌توانیم نتیجهٔ اجرای `split()` را مستقیماً در عبارت `for` قرار دهیم.
 
@@ -152,12 +140,10 @@ fjords
 
 !!! example "Python"
 
-````
-```python
-for x in []:
-    print('This never happens.')
-```
-````
+    ```python
+    for x in []:
+        print('This never happens.')
+    ```
 
 در این مثال، چون لیست هیچ عنصری ندارد، متغیر `x` هیچ مقداری دریافت نمی‌کند و دستور `print()` هم اجرا نخواهد شد.
 
@@ -171,18 +157,16 @@ for x in []:
 
 !!! example "Python"
 
-````
-```python
-scramble = ['c', 'a', 'b']
-sorted(scramble)
-```
+    ```python
+    scramble = ['c', 'a', 'b']
+    sorted(scramble)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['a', 'b', 'c']
-```
-````
+    ```text
+    ['a', 'b', 'c']
+    ```
 
 اما یک نکتهٔ مهم وجود دارد: تابع `sorted()` لیست اصلی را تغییر نمی‌دهد؛ بلکه یک لیست جدید برمی‌گرداند.
 
@@ -190,17 +174,15 @@ sorted(scramble)
 
 !!! example "Python"
 
-````
-```python
-scramble
-```
+    ```python
+    scramble
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['c', 'a', 'b']
-```
-````
+    ```text
+    ['c', 'a', 'b']
+    ```
 
 همان‌طور که می‌بینی، ترتیب عناصر لیست اصلی همچنان بدون تغییر باقی مانده است.
 
@@ -210,17 +192,15 @@ scramble
 
 !!! example "Python"
 
-````
-```python
-sorted('letters')
-```
+    ```python
+    sorted('letters')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['e', 'e', 'l', 'r', 's', 't', 't']
-```
-````
+    ```text
+    ['e', 'e', 'l', 'r', 's', 't', 't']
+    ```
 
 خروجی این عملیات یک لیست از کاراکترهای مرتب‌شده است، نه یک رشته.
 
@@ -228,17 +208,15 @@ sorted('letters')
 
 !!! example "Python"
 
-````
-```python
-''.join(sorted('letters'))
-```
+    ```python
+    ''.join(sorted('letters'))
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'eelrstt'
-```
-````
+    ```text
+    'eelrstt'
+    ```
 
 در این مثال، ابتدا `sorted()` کاراکترهای رشته را مرتب می‌کند و یک لیست برمی‌گرداند. سپس `join()` تمام عناصر آن لیست را به هم متصل می‌کند.
 

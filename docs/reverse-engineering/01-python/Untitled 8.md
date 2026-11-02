@@ -6,15 +6,13 @@
 
 !!! example "Python"
 
-````
-```python
-def absolute_value(x):
-    if x < 0:
-        return -x
-    else:
-        return x
-```
-````
+    ```python
+    def absolute_value(x):
+        if x < 0:
+            return -x
+        else:
+            return x
+    ```
 
 منطق تابع ساده است:
 
@@ -33,31 +31,27 @@ def absolute_value(x):
 
 !!! example "Python"
 
-````
-```python
-def absolute_value_wrong(x):
-    if x < 0:
-        return -x
+    ```python
+    def absolute_value_wrong(x):
+        if x < 0:
+            return -x
 
-    if x > 0:
-        return x
-```
-````
+        if x > 0:
+            return x
+    ```
 
 حالا اگر مقدار صفر را به این تابع بدهیم، چه اتفاقی می‌افتد؟
 
 !!! example "Python"
 
-````
-```python
-absolute_value_wrong(0)
-```
+    ```python
+    absolute_value_wrong(0)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-```
-````
+    ```text
+    ```
 
 هیچ چیزی نمایش داده نمی‌شود!
 
@@ -80,17 +74,15 @@ absolute_value_wrong(0)
 
 !!! example "Python"
 
-````
-```python
-def absolute_value_extra_return(x):
-    if x < 0:
-        return -x
-    else:
-        return x
+    ```python
+    def absolute_value_extra_return(x):
+        if x < 0:
+            return -x
+        else:
+            return x
 
-    return 'This is dead code'
-```
-````
+        return 'This is dead code'
+    ```
 
 اگر `x` منفی باشد، دستور `return -x` اجرا می‌شود و تابع به پایان می‌رسد.
 
@@ -100,9 +92,11 @@ def absolute_value_extra_return(x):
 
 در نتیجه، این دستور هیچ‌وقت اجرا نخواهد شد:
 
-```
-return 'This is dead code'
-```
+!!! example "Python"
+
+    ```python
+    return 'This is dead code'
+    ```
 
 به کدی که تحت هیچ شرایطی اجرا نمی‌شود، **Dead Code** می‌گوییم.
 
@@ -124,9 +118,9 @@ Dead Code معمولاً مستقیماً آسیبی به برنامه نمی‌
 
 طبق قضیه فیثاغورس، فاصله بین این دو نقطه از رابطه زیر به دست می‌آید:
 
-[  
+\[
 distance = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}  
-]
+\]
 
 حالا قبل از نوشتن کد، باید مشخص کنیم تابع موردنظر چه ورودی‌هایی دریافت می‌کند و چه خروجی‌ای باید برگرداند.
 
@@ -139,12 +133,10 @@ distance = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
 
 !!! example "Python"
 
-````
-```python
-def distance(x1, y1, x2, y2):
-    return 0.0
-```
-````
+    ```python
+    def distance(x1, y1, x2, y2):
+        return 0.0
+    ```
 
 این نسخه هنوز فاصله واقعی را محاسبه نمی‌کند و همیشه مقدار `0.0` را برمی‌گرداند.
 
@@ -154,17 +146,15 @@ def distance(x1, y1, x2, y2):
 
 !!! example "Python"
 
-````
-```python
-distance(1, 2, 4, 6)
-```
+    ```python
+    distance(1, 2, 4, 6)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-0.0
-```
-````
+    ```text
+    0.0
+    ```
 
 چرا این مقادیر را انتخاب کردیم؟
 
@@ -189,36 +179,32 @@ distance(1, 2, 4, 6)
 
 !!! example "Python"
 
-````
-```python
-def distance(x1, y1, x2, y2):
-    dx = x2 - x1
-    dy = y2 - y1
+    ```python
+    def distance(x1, y1, x2, y2):
+        dx = x2 - x1
+        dy = y2 - y1
 
-    print('dx is', dx)
-    print('dy is', dy)
+        print('dx is', dx)
+        print('dy is', dy)
 
-    return 0.0
-```
-````
+        return 0.0
+    ```
 
 حالا دوباره تابع را با همان ورودی‌های قبلی آزمایش می‌کنیم:
 
 !!! example "Python"
 
-````
-```python
-distance(1, 2, 4, 6)
-```
+    ```python
+    distance(1, 2, 4, 6)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-dx is 3
-dy is 4
-0.0
-```
-````
+    ```text
+    dx is 3
+    dy is 4
+    0.0
+    ```
 
 خروجی همان چیزی است که انتظار داشتیم: مقدار `dx` برابر با `3` و مقدار `dy` برابر با `4` است.
 
@@ -232,50 +218,46 @@ dy is 4
 
 باید مربع اختلاف مختصات افقی و عمودی را با هم جمع کنیم:
 
-[  
+\[
 d^2 = dx^2 + dy^2  
-]
+\]
 
 کد را به شکل زیر توسعه می‌دهیم:
 
 !!! example "Python"
 
-````
-```python
-def distance(x1, y1, x2, y2):
-    dx = x2 - x1
-    dy = y2 - y1
+    ```python
+    def distance(x1, y1, x2, y2):
+        dx = x2 - x1
+        dy = y2 - y1
 
-    dsquared = dx**2 + dy**2
+        dsquared = dx**2 + dy**2
 
-    print('dsquared is: ', dsquared)
+        print('dsquared is: ', dsquared)
 
-    return 0.0
-```
-````
+        return 0.0
+    ```
 
 دوباره تابع را اجرا می‌کنیم:
 
 !!! example "Python"
 
-````
-```python
-distance(1, 2, 4, 6)
-```
+    ```python
+    distance(1, 2, 4, 6)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-dsquared is:  25
-0.0
-```
-````
+    ```text
+    dsquared is:  25
+    0.0
+    ```
 
 مقدار `dsquared` برابر با `25` است؛ چون:
 
-[  
+\[
 3^2 + 4^2 = 9 + 16 = 25  
-]
+\]
 
 پس این مرحله هم درست کار می‌کند.
 
@@ -285,35 +267,31 @@ dsquared is:  25
 
 !!! example "Python"
 
-````
-```python
-def distance(x1, y1, x2, y2):
-    dx = x2 - x1
-    dy = y2 - y1
+    ```python
+    def distance(x1, y1, x2, y2):
+        dx = x2 - x1
+        dy = y2 - y1
 
-    dsquared = dx**2 + dy**2
+        dsquared = dx**2 + dy**2
 
-    result = math.sqrt(dsquared)
+        result = math.sqrt(dsquared)
 
-    print("result is", result)
-```
-````
+        print("result is", result)
+    ```
 
 حالا تابع را آزمایش می‌کنیم:
 
 !!! example "Python"
 
-````
-```python
-distance(1, 2, 4, 6)
-```
+    ```python
+    distance(1, 2, 4, 6)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-result is 5.0
-```
-````
+    ```text
+    result is 5.0
+    ```
 
 فاصله محاسبه‌شده برابر با `5.0` است؛ دقیقاً همان مقداری که انتظار داشتیم.
 

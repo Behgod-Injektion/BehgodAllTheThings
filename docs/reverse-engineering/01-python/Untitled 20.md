@@ -8,18 +8,16 @@
 
 !!! example "Python"
 
-````
-```python
-letters = ['a', 'b', 'c', 'd']
-letters[1:3]
-```
+    ```python
+    letters = ['a', 'b', 'c', 'd']
+    letters[1:3]
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['b', 'c']
-```
-````
+    ```text
+    ['b', 'c']
+    ```
 
 همان‌طور که می‌بینی، عناصر دارای اندیس ۱ و ۲ انتخاب شده‌اند. یادت باشد که اندیس شروع در برش در نظر گرفته می‌شود، اما اندیس پایان شامل نمی‌شود.
 
@@ -27,33 +25,29 @@ letters[1:3]
 
 !!! example "Python"
 
-````
-```python
-letters[:2]
-```
+    ```python
+    letters[:2]
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['a', 'b']
-```
-````
+    ```text
+    ['a', 'b']
+    ```
 
 اگر اندیس پایان را مشخص نکنیم، برش تا انتهای لیست ادامه پیدا می‌کند:
 
 !!! example "Python"
 
-````
-```python
-letters[2:]
-```
+    ```python
+    letters[2:]
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['c', 'd']
-```
-````
+    ```text
+    ['c', 'd']
+    ```
 
 حالا اگر هر دو اندیس را حذف کنیم چه اتفاقی می‌افتد؟
 
@@ -61,33 +55,29 @@ letters[2:]
 
 !!! example "Python"
 
-````
-```python
-letters[:]
-```
+    ```python
+    letters[:]
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['a', 'b', 'c', 'd']
-```
-````
+    ```text
+    ['a', 'b', 'c', 'd']
+    ```
 
 راه دیگری هم برای کپی کردن یک لیست وجود دارد: استفاده از تابع داخلی `list()`.
 
 !!! example "Python"
 
-````
-```python
-list(letters)
-```
+    ```python
+    list(letters)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['a', 'b', 'c', 'd']
-```
-````
+    ```text
+    ['a', 'b', 'c', 'd']
+    ```
 
 یک نکتهٔ کوچک اما مهم: چون `list` نام یک تابع داخلی Python است، بهتر است از آن به‌عنوان نام متغیر استفاده نکنی؛ چون با این کار دسترسی به تابع اصلی را تحت تأثیر قرار می‌دهی.
 
@@ -99,19 +89,17 @@ list(letters)
 
 !!! example "Python"
 
-````
-```python
-t1 = [1, 2]
-t2 = [3, 4]
-t1 + t2
-```
+    ```python
+    t1 = [1, 2]
+    t2 = [3, 4]
+    t1 + t2
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-[1, 2, 3, 4]
-```
-````
+    ```text
+    [1, 2, 3, 4]
+    ```
 
 به این عملیات **الحاق (Concatenation)** می‌گوییم.
 
@@ -119,17 +107,15 @@ t1 + t2
 
 !!! example "Python"
 
-````
-```python
-['spam'] * 4
-```
+    ```python
+    ['spam'] * 4
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['spam', 'spam', 'spam', 'spam']
-```
-````
+    ```text
+    ['spam', 'spam', 'spam', 'spam']
+    ```
 
 البته قرار نیست همهٔ عملگرهای ریاضی روی لیست‌ها کار کنند. مثلاً نمی‌توانیم دو لیست را با `-` از هم کم کنیم یا با `/` تقسیم کنیم.
 
@@ -139,47 +125,41 @@ t1 + t2
 
 !!! example "Python"
 
-````
-```python
-sum(t1)
-```
+    ```python
+    sum(t1)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-3
-```
-````
+    ```text
+    3
+    ```
 
 تابع `min()` کوچک‌ترین عنصر و تابع `max()` بزرگ‌ترین عنصر را برمی‌گرداند:
 
 !!! example "Python"
 
-````
-```python
-min(t1)
-```
+    ```python
+    min(t1)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-1
-```
-````
+    ```text
+    1
+    ```
 
 !!! example "Python"
 
-````
-```python
-max(t2)
-```
+    ```python
+    max(t2)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-4
-```
-````
+    ```text
+    4
+    ```
 
 ## متدهای لیست (List Methods)
 
@@ -191,18 +171,16 @@ Python متدهای مختلفی برای کار با لیست‌ها در اخ�
 
 !!! example "Python"
 
-````
-```python
-letters.append('e')
-letters
-```
+    ```python
+    letters.append('e')
+    letters
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['a', 'b', 'c', 'd', 'e']
-```
-````
+    ```text
+    ['a', 'b', 'c', 'd', 'e']
+    ```
 
 همان‌طور که می‌بینی، حرف `'e'` به انتهای لیست اضافه شد.
 
@@ -210,18 +188,16 @@ letters
 
 !!! example "Python"
 
-````
-```python
-letters.extend(['f', 'g'])
-letters
-```
+    ```python
+    letters.extend(['f', 'g'])
+    letters
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['a', 'b', 'c', 'd', 'e', 'f', 'g']
-```
-````
+    ```text
+    ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+    ```
 
 دقت کن که `extend()` عناصر لیست ورودی را یکی‌یکی اضافه می‌کند، نه اینکه کل لیست ورودی را به‌عنوان یک عنصر جدید درون لیست قرار دهد.
 
@@ -233,18 +209,16 @@ letters
 
 !!! example "Python"
 
-````
-```python
-t = ['a', 'b', 'c']
-t.pop(1)
-```
+    ```python
+    t = ['a', 'b', 'c']
+    t.pop(1)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'b'
-```
-````
+    ```text
+    'b'
+    ```
 
 متد `pop()` عنصر موردنظر را از لیست حذف می‌کند و همان عنصر حذف‌شده را هم به‌عنوان مقدار بازگشتی برمی‌گرداند.
 
@@ -252,17 +226,15 @@ t.pop(1)
 
 !!! example "Python"
 
-````
-```python
-t
-```
+    ```python
+    t
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['a', 'c']
-```
-````
+    ```text
+    ['a', 'c']
+    ```
 
 همان‌طور که می‌بینی، عنصر `'b'` حذف شده است.
 
@@ -274,12 +246,10 @@ t
 
 !!! example "Python"
 
-````
-```python
-t = ['a', 'b', 'c']
-t.remove('b')
-```
-````
+    ```python
+    t = ['a', 'b', 'c']
+    t.remove('b')
+    ```
 
 این متد اولین عنصری را که با مقدار داده‌شده برابر باشد پیدا می‌کند و از لیست حذف می‌کند.
 
@@ -289,17 +259,15 @@ t.remove('b')
 
 !!! example "Python"
 
-````
-```python
-t
-```
+    ```python
+    t
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-['a', 'c']
-```
-````
+    ```text
+    ['a', 'c']
+    ```
 
 یک نکتهٔ دیگر هم وجود دارد. اگر مقداری را برای حذف کردن مشخص کنیم که اصلاً در لیست وجود نداشته باشد، Python چه واکنشی نشان می‌دهد؟
 
@@ -307,17 +275,15 @@ t
 
 !!! example "Python"
 
-````
-```python
-t.remove('d')
-```
+    ```python
+    t.remove('d')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-ValueError: list.remove(x): x not in list
-```
-````
+    ```text
+    ValueError: list.remove(x): x not in list
+    ```
 
 در این حالت Python یک خطای `ValueError` ایجاد می‌کند؛ چون مقدار `'d'` در لیست وجود ندارد و چیزی برای حذف کردن پیدا نمی‌شود.
 

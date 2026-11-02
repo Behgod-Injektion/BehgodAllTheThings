@@ -20,9 +20,9 @@
 
 طبق تعریف بازگشتی فاکتوریل، پاسخ مثبت است؛ کافی است نتیجه فاکتوریل (n-1) را در (n) ضرب کنیم:
 
-[  
+\[
 n! = n \times (n-1)!  
-]
+\]
 
 البته کمی عجیب به نظر می‌رسد که قبل از کامل شدن یک تابع، فرض کنیم درست کار می‌کند! اما دقیقاً به همین دلیل نام این روش را **Leap of Faith** گذاشته‌اند.
 
@@ -34,13 +34,13 @@ n! = n \times (n-1)!
 
 این دنباله به شکل زیر تعریف می‌شود:
 
-[  
+\[
 \begin{aligned}  
-fibonacci(0) &= 0 \  
-fibonacci(1) &= 1 \  
+fibonacci(0) &= 0 \\
+fibonacci(1) &= 1 \\
 fibonacci(n) &= fibonacci(n-1) + fibonacci(n-2)  
 \end{aligned}  
-]
+\]
 
 یعنی دو مقدار ابتدایی دنباله به‌ترتیب صفر و یک هستند و هر مقدار بعدی از جمع دو مقدار قبلی به دست می‌آید.
 
@@ -48,26 +48,26 @@ fibonacci(n) &= fibonacci(n-1) + fibonacci(n-2)
 
 !!! example "Python"
 
-````
-```python
-def fibonacci(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        return fibonacci(n-1) + fibonacci(n-2)
-```
-````
+    ```python
+    def fibonacci(n):
+        if n == 0:
+            return 0
+        elif n == 1:
+            return 1
+        else:
+            return fibonacci(n-1) + fibonacci(n-2)
+    ```
 
 اگر بخواهیم جریان اجرای این تابع را برای مقادیر کوچک `n` هم مرحله‌به‌مرحله دنبال کنیم، خیلی زود سردرگم می‌شویم!
 
 اما با استفاده از روش Leap of Faith، کار ساده‌تر است. فرض می‌کنیم دو فراخوانی بازگشتی زیر:
 
-```
-fibonacci(n-1)
-fibonacci(n-2)
-```
+!!! example "Python"
+
+    ```python
+    fibonacci(n-1)
+    fibonacci(n-2)
+    ```
 
 هرکدام نتیجه درست خودشان را برمی‌گردانند. در این صورت، جمع کردن آن دو نتیجه دقیقاً همان چیزی است که برای محاسبه `fibonacci(n)` نیاز داریم.
 
@@ -85,24 +85,24 @@ fibonacci(n-2)
 
 !!! example "Python"
 
-````
-```python
-factorial(1.5)
-```
+    ```python
+    factorial(1.5)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-RecursionError: maximum recursion depth exceeded in comparison
-```
-````
+    ```text
+    RecursionError: maximum recursion depth exceeded in comparison
+    ```
 
 به نظر می‌رسد با یک بازگشت بی‌نهایت (Infinite Recursion) مواجه شده‌ایم. اما چرا؟ مگر تابع ما شرط پایه (Base Case) ندارد؟
 
-```
-if n == 0:
-    return 1
-```
+!!! example "Python"
+
+    ```python
+    if n == 0:
+        return 1
+    ```
 
 مشکل اینجاست که شرط پایه فقط زمانی برقرار می‌شود که `n` دقیقاً برابر صفر باشد. اگر ورودی عدد صحیح نباشد، ممکن است هیچ‌وقت به این شرط نرسیم.
 
@@ -129,33 +129,29 @@ Python تابع داخلی `isinstance()` را برای بررسی نوع یک �
 
 !!! example "Python"
 
-````
-```python
-isinstance(3, int)
-```
+    ```python
+    isinstance(3, int)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 و برای یک عدد اعشاری:
 
 !!! example "Python"
 
-````
-```python
-isinstance(1.5, int)
-```
+    ```python
+    isinstance(1.5, int)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 همان‌طور که می‌بینیم، `isinstance()` یک مقدار بولی (`True` یا `False`) برمی‌گرداند و مشخص می‌کند که مقدار ورودی از نوع موردنظر هست یا نه.
 
@@ -163,31 +159,31 @@ False
 
 !!! example "Python"
 
-````
-```python
-def factorial(n):
-    if not isinstance(n, int):
-        print('factorial is only defined for integers.')
-        return None
-    elif n < 0:
-        print('factorial is not defined for negative numbers.')
-        return None
-    elif n == 0:
-        return 1
-    else:
-        return n * factorial(n-1)
-```
-````
+    ```python
+    def factorial(n):
+        if not isinstance(n, int):
+            print('factorial is only defined for integers.')
+            return None
+        elif n < 0:
+            print('factorial is not defined for negative numbers.')
+            return None
+        elif n == 0:
+            return 1
+        else:
+            return n * factorial(n-1)
+    ```
 
 بیایید ببینیم چه تغییراتی ایجاد کردیم.
 
 **اول: بررسی نوع ورودی**
 
-```
-if not isinstance(n, int):
-    print('factorial is only defined for integers.')
-    return None
-```
+!!! example "Python"
+
+    ```python
+    if not isinstance(n, int):
+        print('factorial is only defined for integers.')
+        return None
+    ```
 
 در ابتدای تابع بررسی می‌کنیم که آیا `n` از نوع `int` است یا نه.
 
@@ -197,25 +193,25 @@ if not isinstance(n, int):
 
 !!! example "Python"
 
-````
-```python
-factorial('crunchy frog')
-```
+    ```python
+    factorial('crunchy frog')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-factorial is only defined for integers.
-```
-````
+    ```text
+    factorial is only defined for integers.
+    ```
 
 **دوم: بررسی منفی نبودن عدد**
 
-```
-elif n < 0:
-    print('factorial is not defined for negative numbers.')
-    return None
-```
+!!! example "Python"
+
+    ```python
+    elif n < 0:
+        print('factorial is not defined for negative numbers.')
+        return None
+    ```
 
 اگر ورودی عدد صحیح باشد، بررسی می‌کنیم که منفی نباشد. فاکتوریل در این تابع برای اعداد منفی تعریف نشده است؛ بنابراین در صورت منفی بودن ورودی، پیام مناسبی نمایش می‌دهیم و با `return None` از تابع خارج می‌شویم.
 
@@ -223,28 +219,28 @@ elif n < 0:
 
 !!! example "Python"
 
-````
-```python
-factorial(-2)
-```
+    ```python
+    factorial(-2)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-factorial is not defined for negative numbers.
-```
-````
+    ```text
+    factorial is not defined for negative numbers.
+    ```
 
 **سوم: اجرای محاسبه بازگشتی**
 
 اگر از دو بررسی قبلی عبور کنیم، می‌دانیم که `n` یک عدد صحیح نامنفی است. بنابراین می‌توانیم با اطمینان از اینکه بازگشت در نهایت به شرط پایه می‌رسد، محاسبه فاکتوریل را انجام دهیم:
 
-```
-elif n == 0:
-    return 1
-else:
-    return n * factorial(n-1)
-```
+!!! example "Python"
+
+    ```python
+    elif n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+    ```
 
 به این ترتیب، قبل از اجرای منطق اصلی تابع، ورودی را اعتبارسنجی کرده‌ایم.
 
@@ -271,11 +267,13 @@ else:
 
 مثلاً:
 
-```
-def factorial(n):
-    print("n =", n, "type =", type(n))
-    # ادامه تابع
-```
+!!! example "Python"
+
+    ```python
+    def factorial(n):
+        print("n =", n, "type =", type(n))
+        # ادامه تابع
+    ```
 
 به این ترتیب، قبل از اینکه تابع وارد منطق اصلی خودش شود، می‌توانیم ببینیم دقیقاً چه مقداری دریافت کرده است.
 
@@ -307,22 +305,20 @@ def factorial(n):
 
 !!! example "Python"
 
-````
-```python
-def factorial(n):
-    space = ' ' * (4 * n)
-    print(space, 'factorial', n)
+    ```python
+    def factorial(n):
+        space = ' ' * (4 * n)
+        print(space, 'factorial', n)
 
-    if n == 0:
-        print(space, 'returning 1')
-        return 1
-    else:
-        recurse = factorial(n-1)
-        result = n * recurse
-        print(space, 'returning', result)
-        return result
-```
-````
+        if n == 0:
+            print(space, 'returning 1')
+            return 1
+        else:
+            recurse = factorial(n-1)
+            result = n * recurse
+            print(space, 'returning', result)
+            return result
+    ```
 
 در این نسخه، دو متغیر جدید داریم:
 
@@ -339,28 +335,26 @@ def factorial(n):
 
 !!! example "Python"
 
-````
-```python
-factorial(4)
-```
+    ```python
+    factorial(4)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-             factorial 4
-         factorial 3
-     factorial 2
- factorial 1
-factorial 0
-returning 1
- returning 1
-     returning 2
-         returning 6
-             returning 24
+    ```text
+                 factorial 4
+             factorial 3
+         factorial 2
+     factorial 1
+    factorial 0
+    returning 1
+     returning 1
+         returning 2
+             returning 6
+                 returning 24
 
-24
-```
-````
+    24
+    ```
 
 به تورفتگی خروجی دقت کن.
 
@@ -368,15 +362,15 @@ returning 1
 
 وقتی به شرط پایه می‌رسیم، مقدار `1` برگردانده می‌شود. بعد از آن، فراخوانی‌های قبلی یکی‌یکی از حالت انتظار خارج می‌شوند و محاسبات خودشان را انجام می‌دهند:
 
-[  
+\[
 \begin{aligned}  
-factorial(0) &= 1 \  
-factorial(1) &= 1 \times 1 = 1 \  
-factorial(2) &= 2 \times 1 = 2 \  
-factorial(3) &= 3 \times 2 = 6 \  
+factorial(0) &= 1 \\
+factorial(1) &= 1 \times 1 = 1 \\
+factorial(2) &= 2 \times 1 = 2 \\
+factorial(3) &= 3 \times 2 = 6 \\
 factorial(4) &= 4 \times 6 = 24  
 \end{aligned}  
-]
+\]
 
 به این ترتیب، می‌توانیم هم مسیر پایین رفتن فراخوانی‌های بازگشتی و هم مسیر برگشت مقادیر را مشاهده کنیم.
 

@@ -12,15 +12,19 @@
 
 ابتدا یک رشته نمونه داریم:
 
-```
-text = "I am Dracula; and I bid you welcome, Mr. Harker, to my house."
-```
+!!! example "Python"
+
+    ```python
+    text = "I am Dracula; and I bid you welcome, Mr. Harker, to my house."
+    ```
 
 و الگویی که می‌خواهیم جست‌وجو کنیم:
 
-```
-pattern = 'Dracula'
-```
+!!! example "Python"
+
+    ```python
+    pattern = 'Dracula'
+    ```
 
 ### ماژول re و تابع search()
 
@@ -28,22 +32,26 @@ pattern = 'Dracula'
 
 برای استفاده از آن، ابتدا ماژول را وارد می‌کنیم:
 
-```
-import re
-```
+!!! example "Python"
+
+    ```python
+    import re
+    ```
 
 حالا می‌توانیم از تابع `search()` برای جست‌وجوی الگو در متن استفاده کنیم:
 
-```
-result = re.search(pattern, text)
-result
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    result = re.search(pattern, text)
+    result
+    ```
 
-```
-<re.Match object; span=(5, 12), match='Dracula'>
-```
+    **Output:**
+
+    ```text
+    <re.Match object; span=(5, 12), match='Dracula'>
+    ```
 
 اگر الگوی موردنظر در متن پیدا شود، تابع `search()` یک شیء از نوع `Match` برمی‌گرداند.
 
@@ -51,39 +59,45 @@ result
 
 برای مثال، یکی از ویژگی‌های آن `string` است که متن اصلیِ مورد جست‌وجو را نگه می‌دارد:
 
-```
-result.string
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    result.string
+    ```
 
-```
-'I am Dracula; and I bid you welcome, Mr. Harker, to my house.'
-```
+    **Output:**
+
+    ```text
+    'I am Dracula; and I bid you welcome, Mr. Harker, to my house.'
+    ```
 
 همچنین متد `group()` بخشی از متن را که با الگوی ما مطابقت داشته است، برمی‌گرداند:
 
-```
-result.group()
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    result.group()
+    ```
 
-```
-'Dracula'
-```
+    **Output:**
+
+    ```text
+    'Dracula'
+    ```
 
 متد دیگری به نام `span()` نیز وجود دارد که موقعیت شروع و پایان بخش تطبیق‌یافته را در رشته مشخص می‌کند:
 
-```
-result.span()
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    result.span()
+    ```
 
-```
-(5, 12)
-```
+    **Output:**
+
+    ```text
+    (5, 12)
+    ```
 
 یعنی تطبیق از اندیس `5` شروع شده و تا اندیس `12` ادامه دارد؛ البته همان‌طور که در برش رشته‌ها دیدیم، اندیس پایان در محدوده نتیجه قرار نمی‌گیرد.
 
@@ -95,28 +109,32 @@ result.span()
 
 برای مثال:
 
-```
-result = re.search('Count', text)
-print(result)
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    result = re.search('Count', text)
+    print(result)
+    ```
 
-```
-None
-```
+    **Output:**
+
+    ```text
+    None
+    ```
 
 بنابراین می‌توانیم با بررسی اینکه نتیجه برابر با `None` هست یا نه، متوجه شویم جست‌وجو موفق بوده است یا خیر:
 
-```
-result == None
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    result == None
+    ```
 
-```
-True
-```
+    **Output:**
+
+    ```text
+    True
+    ```
 
 حالا که با رفتار `search()` و نتیجه‌ای که برمی‌گرداند آشنا شدیم، می‌توانیم این قابلیت را داخل یک تابع قرار دهیم.
 
@@ -124,28 +142,32 @@ True
 
 تابع زیر تمام خطوط فایل کتاب را یکی‌یکی بررسی می‌کند تا اولین خطی را پیدا کند که با الگوی موردنظر مطابقت دارد:
 
-```
-def find_first(pattern):
-    for line in open('pg345_cleaned.txt'):
-        result = re.search(pattern, line)
-        if result != None:
-            return result
-```
+!!! example "Python"
+
+    ```python
+    def find_first(pattern):
+        for line in open('pg345_cleaned.txt'):
+            result = re.search(pattern, line)
+            if result != None:
+                return result
+    ```
 
 به محض اینکه یک تطبیق پیدا شود، تابع همان شیء `Match` را برمی‌گرداند و اجرای تابع تمام می‌شود.
 
 برای مثال، می‌توانیم اولین اشاره به نام `Harker` را در کتاب پیدا کنیم:
 
-```
-result = find_first('Harker')
-result.string
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    result = find_first('Harker')
+    result.string
+    ```
 
-```
-'CHAPTER I. Jonathan Harker’s Journal\n'
-```
+    **Output:**
+
+    ```text
+    'CHAPTER I. Jonathan Harker’s Journal\n'
+    ```
 
 در این مثال، استفاده از Regular Expression ضرورت خاصی نداشت؛ چون می‌توانستیم همین کار را ساده‌تر با عملگر `in` انجام دهیم.
 
@@ -163,17 +185,19 @@ result.string
 
 می‌توانیم هر دو حالت را در یک الگو قرار دهیم:
 
-```
-pattern = r'Mina|Murray'
-result = find_first(pattern)
-result.string
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    pattern = r'Mina|Murray'
+    result = find_first(pattern)
+    result.string
+    ```
 
-```
-'CHAPTER V. Letters—Lucy and Mina\n'
-```
+    **Output:**
+
+    ```text
+    'CHAPTER V. Letters—Lucy and Mina\n'
+    ```
 
 الگوی `Mina|Murray` به این معناست:
 
@@ -194,30 +218,34 @@ result.string
 
 تابع زیر تمام خطوط کتاب را بررسی می‌کند و تعداد خطوطی را که با الگوی موردنظر مطابقت دارند، برمی‌گرداند:
 
-```
-def count_matches(pattern):
-    count = 0
+!!! example "Python"
 
-    for line in open('pg345_cleaned.txt'):
-        result = re.search(pattern, line)
+    ```python
+    def count_matches(pattern):
+        count = 0
 
-        if result != None:
-            count += 1
+        for line in open('pg345_cleaned.txt'):
+            result = re.search(pattern, line)
 
-    return count
-```
+            if result != None:
+                count += 1
+
+        return count
+    ```
 
 حالا می‌توانیم تعداد خطوطی را که شامل نام `Mina` یا `Murray` هستند، محاسبه کنیم:
 
-```
-count_matches('Mina|Murray')
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    count_matches('Mina|Murray')
+    ```
 
-```
-229
-```
+    **Output:**
+
+    ```text
+    229
+    ```
 
 بنابراین ۲۲۹ خط از کتاب با این الگو مطابقت دارند.
 
@@ -241,16 +269,18 @@ count_matches('Mina|Murray')
 
 برای مثال، می‌خواهیم اولین خطی را پیدا کنیم که با کلمه `Dracula` شروع می‌شود:
 
-```
-result = find_first('^Dracula')
-result.string
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    result = find_first('^Dracula')
+    result.string
+    ```
 
-```
-'Dracula, jumping to his feet, said:--\n'
-```
+    **Output:**
+
+    ```text
+    'Dracula, jumping to his feet, said:--\n'
+    ```
 
 دقت کن که این الگو فقط به دنبال وجود کلمه `Dracula` در خط نیست؛ بلکه بررسی می‌کند آیا خط دقیقاً با این کلمه شروع شده است یا خیر.
 
@@ -262,16 +292,18 @@ result.string
 
 برای مثال:
 
-```
-result = find_first('Harker$')
-result.string
-```
+!!! example "Python"
 
-خروجی:
+    ```python
+    result = find_first('Harker$')
+    result.string
+    ```
 
-```
-"by five o'clock, we must start off; for it won't do to leave Mrs. Harker\n"
-```
+    **Output:**
+
+    ```text
+    "by five o'clock, we must start off; for it won't do to leave Mrs. Harker\n"
+    ```
 
 در این مثال، الگوی `Harker$` به دنبال خطی می‌گردد که به `Harker` ختم شود.
 

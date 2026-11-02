@@ -15,16 +15,14 @@
 
 !!! example "Python"
 
-````
-```python
-def uses_any(word, letters):
-    for letter in word.lower():
-        if letter in letters.lower():
-            return True
+    ```python
+    def uses_any(word, letters):
+        for letter in word.lower():
+            if letter in letters.lower():
+                return True
 
-    return False
-```
-````
+        return False
+    ```
 
 بیایید چند مثال را بررسی کنیم.
 
@@ -32,17 +30,15 @@ def uses_any(word, letters):
 
 !!! example "Python"
 
-````
-```python
-uses_any('banana', 'aeiou')
-```
+    ```python
+    uses_any('banana', 'aeiou')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 چون کلمه `banana` شامل حرف `a` است، نتیجه `True` خواهد بود.
 
@@ -50,17 +46,15 @@ True
 
 !!! example "Python"
 
-````
-```python
-uses_any('apple', 'xyz')
-```
+    ```python
+    uses_any('apple', 'xyz')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 هیچ‌کدام از این سه حرف در کلمه `apple` وجود ندارند؛ بنابراین نتیجه `False` است.
 
@@ -68,17 +62,15 @@ False
 
 !!! example "Python"
 
-````
-```python
-uses_any('Banana', 'AEIOU')
-```
+    ```python
+    uses_any('Banana', 'AEIOU')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 ### الگوی Linear Search
 
@@ -110,23 +102,21 @@ True
 
 !!! example "Python"
 
-````
-```python
-def uses_any(word, letters):
-    """Checks if a word uses any of a list of letters.
+    ```python
+    def uses_any(word, letters):
+        """Checks if a word uses any of a list of letters.
 
-    >>> uses_any('banana', 'aeiou')
-    True
-    >>> uses_any('apple', 'xyz')
-    False
-    """
-    for letter in word.lower():
-        if letter in letters.lower():
-            return True
+        >>> uses_any('banana', 'aeiou')
+        True
+        >>> uses_any('apple', 'xyz')
+        False
+        """
+        for letter in word.lower():
+            if letter in letters.lower():
+                return True
 
-    return False
-```
-````
+        return False
+    ```
 
 به قسمت Docstring دقت کن. دو تست داخل آن قرار داده‌ایم.
 
@@ -136,19 +126,23 @@ def uses_any(word, letters):
 
 برای مثال، در تست اول:
 
-```
->>> uses_any('banana', 'aeiou')
-True
-```
+!!! example "Python"
+
+    ```python
+    >>> uses_any('banana', 'aeiou')
+    True
+    ```
 
 چون کلمه `banana` شامل حرف `a` است، انتظار داریم نتیجه `True` باشد.
 
 در تست دوم:
 
-```
->>> uses_any('apple', 'xyz')
-False
-```
+!!! example "Python"
+
+    ```python
+    >>> uses_any('apple', 'xyz')
+    False
+    ```
 
 چون هیچ‌کدام از حروف `x`, `y`, `z` در کلمه `apple` وجود ندارند، نتیجه مورد انتظار `False` است.
 
@@ -160,14 +154,12 @@ False
 
 !!! example "Python"
 
-````
-```python
-from doctest import run_docstring_examples
+    ```python
+    from doctest import run_docstring_examples
 
-def run_doctests(func):
-    run_docstring_examples(func, globals(), name=func.__name__)
-```
-````
+    def run_doctests(func):
+        run_docstring_examples(func, globals(), name=func.__name__)
+    ```
 
 در این کد با دو مفهوم `globals` و `__name__` روبه‌رو می‌شویم که هنوز درباره آن‌ها صحبت نکرده‌ایم. فعلاً لازم نیست نگران جزئیاتشان باشیم؛ کافی است بدانیم این تابع کمکی، تست‌های موجود در Docstring تابع موردنظر را اجرا می‌کند.
 
@@ -175,11 +167,9 @@ def run_doctests(func):
 
 !!! example "Python"
 
-````
-```python
-run_doctests(uses_any)
-```
-````
+    ```python
+    run_doctests(uses_any)
+    ```
 
 تابع `run_doctests()` عبارت‌های موجود در Docstring را پیدا می‌کند و آن‌ها را اجرا می‌کند.
 
@@ -197,46 +187,42 @@ run_doctests(uses_any)
 
 !!! example "Python"
 
-````
-```python
-def uses_any_incorrect(word, letters):
-    """Checks if a word uses any of a list of letters.
+    ```python
+    def uses_any_incorrect(word, letters):
+        """Checks if a word uses any of a list of letters.
 
-    >>> uses_any_incorrect('banana', 'aeiou')
-    True
-    >>> uses_any_incorrect('apple', 'xyz')
-    False
-    """
-    for letter in word.lower():
-        if letter in letters.lower():
-            return True
-        else:
-            return False     # INCORRECT!
-```
-````
+        >>> uses_any_incorrect('banana', 'aeiou')
+        True
+        >>> uses_any_incorrect('apple', 'xyz')
+        False
+        """
+        for letter in word.lower():
+            if letter in letters.lower():
+                return True
+            else:
+                return False     # INCORRECT!
+    ```
 
 حالا تست‌های این تابع را اجرا می‌کنیم:
 
 !!! example "Python"
 
-````
-```python
-run_doctests(uses_any_incorrect)
-```
+    ```python
+    run_doctests(uses_any_incorrect)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-**********************************************************************
-File "__main__", line 4, in uses_any_incorrect
-Failed example:
-    uses_any_incorrect('banana', 'aeiou')
-Expected:
-    True
-Got:
-    False
-```
-````
+    ```text
+    **********************************************************************
+    File "__main__", line 4, in uses_any_incorrect
+    Failed example:
+        uses_any_incorrect('banana', 'aeiou')
+    Expected:
+        True
+    Got:
+        False
+    ```
 
 Doctest اطلاعات مفیدی درباره تست ناموفق نمایش می‌دهد:
 

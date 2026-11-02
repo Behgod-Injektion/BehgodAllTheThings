@@ -18,13 +18,11 @@
 
 !!! example "Python"
 
-````
-```python
-def print_lyrics():
-    print("I'm a lumberjack, and I'm okay.")
-    print("I sleep all night and I work all day.")
-```
-````
+    ```python
+    def print_lyrics():
+        print("I'm a lumberjack, and I'm okay.")
+        print("I sleep all night and I work all day.")
+    ```
 
 در خط اول از کلمهٔ کلیدی `def` استفاده کرده‌ایم. این کلمه به Python می‌گوید که قصد داریم یک تابع جدید تعریف کنیم.
 
@@ -32,9 +30,11 @@ def print_lyrics():
 
 اما این پرانتزهای خالی بعد از نام تابع چه معنایی دارند؟
 
-```
-def print_lyrics():
-```
+!!! example "Python"
+
+    ```python
+    def print_lyrics():
+    ```
 
 پرانتزها محل قرار گرفتن پارامترهای تابع هستند. خالی بودن آن‌ها یعنی این تابع در حال حاضر هیچ آرگومانی دریافت نمی‌کند.
 
@@ -64,11 +64,13 @@ Body یک تابع می‌تواند شامل هر تعداد دستور و از
 
 وقتی کد زیر را اجرا می‌کنیم:
 
-```
-def print_lyrics():
-    print("I'm a lumberjack, and I'm okay.")
-    print("I sleep all night and I work all day.")
-```
+!!! example "Python"
+
+    ```python
+    def print_lyrics():
+        print("I'm a lumberjack, and I'm okay.")
+        print("I sleep all night and I work all day.")
+    ```
 
 Python تابعی با نام `print_lyrics` تعریف می‌کند، اما هنوز دستورهای داخل آن اجرا نمی‌شوند.
 
@@ -76,21 +78,19 @@ Python تابعی با نام `print_lyrics` تعریف می‌کند، اما �
 
 !!! example "Python"
 
-````
-```python
-def print_lyrics():
-    print("I'm a lumberjack, and I'm okay.")
-    print("I sleep all night and I work all day.")
+    ```python
+    def print_lyrics():
+        print("I'm a lumberjack, and I'm okay.")
+        print("I sleep all night and I work all day.")
 
-print_lyrics
-```
+    print_lyrics
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-<function __main__.print_lyrics()>
-```
-````
+    ```text
+    <function __main__.print_lyrics()>
+    ```
 
 این خروجی نشان می‌دهد که `print_lyrics` یک Function Object است که هیچ آرگومانی دریافت نمی‌کند.
 
@@ -104,22 +104,20 @@ print_lyrics
 
 !!! example "Python"
 
-````
-```python
-def print_lyrics():
-    print("I'm a lumberjack, and I'm okay.")
-    print("I sleep all night and I work all day.")
+    ```python
+    def print_lyrics():
+        print("I'm a lumberjack, and I'm okay.")
+        print("I sleep all night and I work all day.")
 
-print_lyrics()
-```
+    print_lyrics()
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-I'm a lumberjack, and I'm okay.
-I sleep all night and I work all day.
-```
-````
+    ```text
+    I'm a lumberjack, and I'm okay.
+    I sleep all night and I work all day.
+    ```
 
 این بار با نوشتن `print_lyrics()`، تابع را فراخوانی کرده‌ایم و Python دستورهای داخل Body را به ترتیب اجرا کرده است.
 
@@ -137,13 +135,11 @@ I sleep all night and I work all day.
 
 !!! example "Python"
 
-````
-```python
-def print_twice(string):
-    print(string)
-    print(string)
-```
-````
+    ```python
+    def print_twice(string):
+        print(string)
+        print(string)
+    ```
 
 این بار داخل پرانتز نام `string` را قرار داده‌ایم. به متغیری که در زمان تعریف تابع داخل پرانتز می‌نویسیم، **پارامتر (Parameter)** می‌گویند.
 
@@ -155,22 +151,20 @@ def print_twice(string):
 
 !!! example "Python"
 
-````
-```python
-def print_twice(string):
-    print(string)
-    print(string)
+    ```python
+    def print_twice(string):
+        print(string)
+        print(string)
 
-print_twice('Dennis Moore, ')
-```
+    print_twice('Dennis Moore, ')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Dennis Moore,
-Dennis Moore,
-```
-````
+    ```text
+    Dennis Moore,
+    Dennis Moore,
+    ```
 
 در این فراخوانی، مقدار `'Dennis Moore, '` به پارامتر `string` اختصاص داده می‌شود. سپس دو دستور `print()` اجرا می‌شوند و همان مقدار را دو بار نمایش می‌دهند.
 
@@ -178,20 +172,18 @@ Dennis Moore,
 
 !!! example "Python"
 
-````
-```python
-string = 'Dennis Moore, '
-print(string)
-print(string)
-```
+    ```python
+    string = 'Dennis Moore, '
+    print(string)
+    print(string)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Dennis Moore,
-Dennis Moore,
-```
-````
+    ```text
+    Dennis Moore,
+    Dennis Moore,
+    ```
 
 در واقع، هنگام فراخوانی تابع، مقدار آرگومان به پارامتر اختصاص داده می‌شود و سپس دستورهای داخل تابع اجرا می‌شوند.
 
@@ -201,23 +193,21 @@ Dennis Moore,
 
 !!! example "Python"
 
-````
-```python
-def print_twice(string):
-    print(string)
-    print(string)
+    ```python
+    def print_twice(string):
+        print(string)
+        print(string)
 
-line = 'Dennis Moore, '
-print_twice(line)
-```
+    line = 'Dennis Moore, '
+    print_twice(line)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-Dennis Moore,
-Dennis Moore,
-```
-````
+    ```text
+    Dennis Moore,
+    Dennis Moore,
+    ```
 
 در این مثال، مقدار متغیر `line` هنگام فراخوانی تابع به پارامتر `string` اختصاص داده می‌شود.
 

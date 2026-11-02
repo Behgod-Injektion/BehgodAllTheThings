@@ -6,16 +6,14 @@
 
 !!! example "Python"
 
-````
-```python
-def distance(x1, y1, x2, y2):
-    dx = x2 - x1
-    dy = y2 - y1
-    dsquared = dx**2 + dy**2
-    result = math.sqrt(dsquared)
-    return result
-```
-````
+    ```python
+    def distance(x1, y1, x2, y2):
+        dx = x2 - x1
+        dy = y2 - y1
+        dsquared = dx**2 + dy**2
+        result = math.sqrt(dsquared)
+        return result
+    ```
 
 حالا تابع `distance` یک **Pure Function** است؛ یعنی نتیجه را برمی‌گرداند، اما چیزی را مستقیماً نمایش نمی‌دهد یا اثر جانبی دیگری ایجاد نمی‌کند.
 
@@ -23,23 +21,23 @@ def distance(x1, y1, x2, y2):
 
 !!! example "Python"
 
-````
-```python
-distance(1, 2, 4, 6)
-```
+    ```python
+    distance(1, 2, 4, 6)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-5.0
-```
-````
+    ```text
+    5.0
+    ```
 
 اما اگر نتیجه را در یک متغیر ذخیره کنیم، چیزی نمایش داده نمی‌شود:
 
-```
-d = distance(1, 2, 4, 6)
-```
+!!! example "Python"
+
+    ```python
+    d = distance(1, 2, 4, 6)
+    ```
 
 به همین سادگی!
 
@@ -80,15 +78,13 @@ Incremental Development می‌تواند زمان زیادی از Debugging ر�
 
 !!! example "Python"
 
-````
-```python
-def is_divisible(x, y):
-    if x % y == 0:
-        return True
-    else:
-        return False
-```
-````
+    ```python
+    def is_divisible(x, y):
+        if x % y == 0:
+            return True
+        else:
+            return False
+    ```
 
 در این تابع، از عملگر `%` برای محاسبه باقی‌مانده تقسیم استفاده می‌کنیم.
 
@@ -98,33 +94,29 @@ def is_divisible(x, y):
 
 !!! example "Python"
 
-````
-```python
-is_divisible(6, 4)
-```
+    ```python
+    is_divisible(6, 4)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 چون عدد ۶ بر ۴ بدون باقی‌مانده بخش‌پذیر نیست.
 
 !!! example "Python"
 
-````
-```python
-is_divisible(6, 3)
-```
+    ```python
+    is_divisible(6, 3)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 این بار باقی‌مانده تقسیم صفر است؛ بنابراین نتیجه `True` خواهد بود.
 
@@ -134,9 +126,11 @@ True
 
 به عبارت زیر دقت کن:
 
-```
-x % y == 0
-```
+!!! example "Python"
+
+    ```python
+    x % y == 0
+    ```
 
 نتیجه عملگر `==` خودش یک مقدار بولی است؛ یعنی یا `True` برمی‌گرداند یا `False`.
 
@@ -146,12 +140,10 @@ x % y == 0
 
 !!! example "Python"
 
-````
-```python
-def is_divisible(x, y):
-    return x % y == 0
-```
-````
+    ```python
+    def is_divisible(x, y):
+        return x % y == 0
+    ```
 
 این نسخه دقیقاً همان رفتار نسخه قبلی را دارد، اما ساده‌تر و خواناتر است.
 
@@ -163,27 +155,27 @@ def is_divisible(x, y):
 
 !!! example "Python"
 
-````
-```python
-if is_divisible(6, 2):
-    print('divisible')
-```
+    ```python
+    if is_divisible(6, 2):
+        print('divisible')
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-divisible
-```
-````
+    ```text
+    divisible
+    ```
 
 تابع `is_divisible(6, 2)` مقدار `True` را برمی‌گرداند؛ بنابراین بدنه دستور `if` اجرا می‌شود.
 
 ممکن است وسوسه شوی شرط را به این شکل بنویسی:
 
-```
-if is_divisible(6, 2) == True:
-    print('divisible')
-```
+!!! example "Python"
+
+    ```python
+    if is_divisible(6, 2) == True:
+        print('divisible')
+    ```
 
 اما این مقایسه اضافی است!
 
@@ -217,13 +209,13 @@ if is_divisible(6, 2) == True:
 
 تعریف ریاضی آن به شکل زیر است:
 
-[  
+\[
 0! = 1  
-]
+\]
 
-[  
+\[
 n! = n \times (n-1)!  
-]
+\]
 
 این تعریف دو بخش دارد:
 
@@ -234,41 +226,41 @@ n! = n \times (n-1)!
 
 برای مثال:
 
-[  
+\[
 3! = 3 \times 2!  
-]
+\]
 
 و:
 
-[  
+\[
 2! = 2 \times 1!  
-]
+\]
 
 همچنین:
 
-[  
+\[
 1! = 1 \times 0!  
-]
+\]
 
 از آنجا که می‌دانیم:
 
-[  
+\[
 0! = 1  
-]
+\]
 
 می‌توانیم محاسبات را به عقب برگردانیم:
 
-[  
+\[
 1! = 1 \times 1 = 1  
-]
+\]
 
-[  
+\[
 2! = 2 \times 1 = 2  
-]
+\]
 
-[  
+\[
 3! = 3 \times 2 = 6  
-]
+\]
 
 حالا سؤال این است: اگر بتوانیم چیزی را به‌صورت بازگشتی تعریف کنیم، آیا می‌توانیم برنامه‌ای بنویسیم که همان تعریف را محاسبه کند؟
 
@@ -282,12 +274,10 @@ n! = n \times (n-1)!
 
 !!! example "Python"
 
-````
-```python
-def factorial(n):
-    return 0
-```
-````
+    ```python
+    def factorial(n):
+        return 0
+    ```
 
 هنوز هیچ محاسبه‌ای انجام نمی‌دهیم؛ فقط ساختار اولیه تابع را آماده کرده‌ایم.
 
@@ -297,15 +287,13 @@ def factorial(n):
 
 !!! example "Python"
 
-````
-```python
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return 0
-```
-````
+    ```python
+    def factorial(n):
+        if n == 0:
+            return 1
+        else:
+            return 0
+    ```
 
 تا اینجا حالت پایه (Base Case) را پیاده‌سازی کرده‌ایم.
 
@@ -317,16 +305,14 @@ def factorial(n):
 
 !!! example "Python"
 
-````
-```python
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        recurse = factorial(n - 1)
-        return n * recurse
-```
-````
+    ```python
+    def factorial(n):
+        if n == 0:
+            return 1
+        else:
+            recurse = factorial(n - 1)
+            return n * recurse
+    ```
 
 حالا تابع ما هر دو بخش تعریف ریاضی فاکتوریل را پیاده‌سازی می‌کند:
 
@@ -341,11 +327,9 @@ def factorial(n):
 
 !!! example "Python"
 
-````
-```python
-factorial(3)
-```
-````
+    ```python
+    factorial(3)
+    ```
 
 اجرای تابع را مرحله‌به‌مرحله دنبال کنیم:
 
@@ -383,9 +367,11 @@ factorial(3)
 
 **Output:**
 
-```
-6
-```
+!!! example "Python"
+
+    ```python
+    6
+    ```
 
 در واقع، هر فراخوانی بازگشتی منتظر می‌ماند تا فراخوانی داخلی نتیجه‌اش را برگرداند. سپس از آن نتیجه برای ادامه محاسبات خودش استفاده می‌کند.
 

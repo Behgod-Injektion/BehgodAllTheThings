@@ -22,12 +22,10 @@
 
 !!! example "Python"
 
-````
-```python
-fruit = 'banana'
-letter = fruit[1]
-```
-````
+    ```python
+    fruit = 'banana'
+    letter = fruit[1]
+    ```
 
 در این مثال، کاراکتری را که در موقعیت شماره `1` قرار دارد از رشته `fruit` انتخاب کرده‌ایم و در متغیر `letter` قرار داده‌ایم.
 
@@ -37,17 +35,15 @@ letter = fruit[1]
 
 !!! example "Python"
 
-````
-```python
-letter
-```
+    ```python
+    letter
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'a'
-```
-````
+    ```text
+    'a'
+    ```
 
 چرا کاراکتر شماره `1` برابر `a` است، نه `b`؟
 
@@ -57,17 +53,15 @@ letter
 
 !!! example "Python"
 
-````
-```python
-fruit[0]
-```
+    ```python
+    fruit[0]
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'b'
-```
-````
+    ```text
+    'b'
+    ```
 
 پس می‌توانیم حرف `b` را کاراکتر صفرم رشته `banana` در نظر بگیریم!
 
@@ -77,34 +71,30 @@ fruit[0]
 
 !!! example "Python"
 
-````
-```python
-i = 1
-fruit[i]
-```
+    ```python
+    i = 1
+    fruit[i]
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'a'
-```
-````
+    ```text
+    'a'
+    ```
 
 حتی می‌توانیم یک عبارت شامل متغیرها و عملگرها را به‌عنوان اندیس قرار دهیم:
 
 !!! example "Python"
 
-````
-```python
-fruit[i+1]
-```
+    ```python
+    fruit[i+1]
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'n'
-```
-````
+    ```text
+    'n'
+    ```
 
 در اینجا ابتدا عبارت `i + 1` محاسبه می‌شود و سپس کاراکتر موجود در اندیس حاصل انتخاب می‌شود.
 
@@ -112,17 +102,15 @@ fruit[i+1]
 
 !!! example "Python"
 
-````
-```python
-fruit[1.5]
-```
+    ```python
+    fruit[1.5]
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-TypeError: string indices must be integers
-```
-````
+    ```text
+    TypeError: string indices must be integers
+    ```
 
 ### به دست آوردن طول رشته با len
 
@@ -130,18 +118,16 @@ TypeError: string indices must be integers
 
 !!! example "Python"
 
-````
-```python
-n = len(fruit)
-n
-```
+    ```python
+    n = len(fruit)
+    n
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-6
-```
-````
+    ```text
+    6
+    ```
 
 رشته `banana` شش کاراکتر دارد.
 
@@ -149,17 +135,15 @@ n
 
 !!! example "Python"
 
-````
-```python
-fruit[n]
-```
+    ```python
+    fruit[n]
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-IndexError: string index out of range
-```
-````
+    ```text
+    IndexError: string index out of range
+    ```
 
 اما چرا خطا گرفتیم؟
 
@@ -171,17 +155,15 @@ IndexError: string index out of range
 
 !!! example "Python"
 
-````
-```python
-fruit[n-1]
-```
+    ```python
+    fruit[n-1]
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'a'
-```
-````
+    ```text
+    'a'
+    ```
 
 اما راه ساده‌تری هم وجود دارد!
 
@@ -193,17 +175,15 @@ fruit[n-1]
 
 !!! example "Python"
 
-````
-```python
-fruit[-1]
-```
+    ```python
+    fruit[-1]
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-'a'
-```
-````
+    ```text
+    'a'
+    ```
 
 اندیس‌های منفی از انتهای رشته به سمت ابتدا حرکت می‌کنند:
 

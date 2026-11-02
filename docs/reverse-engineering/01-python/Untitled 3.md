@@ -25,18 +25,16 @@
 
 !!! example "Python"
 
-````
-```python
-minutes = 105
-minutes / 60
-```
+    ```python
+    minutes = 105
+    minutes / 60
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-1.75
-```
-````
+    ```text
+    1.75
+    ```
 
 اما معمولاً مدت زمان را به شکل ۱٫۷۵ ساعت بیان نمی‌کنیم؛ بلکه می‌گوییم یک ساعت و مقداری دقیقه.
 
@@ -44,19 +42,17 @@ minutes / 60
 
 !!! example "Python"
 
-````
-```python
-minutes = 105
-hours = minutes // 60
-hours
-```
+    ```python
+    minutes = 105
+    hours = minutes // 60
+    hours
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-1
-```
-````
+    ```text
+    1
+    ```
 
 حالا می‌دانیم یک ساعت کامل داریم. اما چند دقیقه باقی مانده است؟
 
@@ -64,18 +60,16 @@ hours
 
 !!! example "Python"
 
-````
-```python
-remainder = minutes - hours * 60
-remainder
-```
+    ```python
+    remainder = minutes - hours * 60
+    remainder
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-45
-```
-````
+    ```text
+    45
+    ```
 
 پس ۱۰۵ دقیقه برابر با یک ساعت و ۴۵ دقیقه است.
 
@@ -83,18 +77,16 @@ remainder
 
 !!! example "Python"
 
-````
-```python
-remainder = minutes % 60
-remainder
-```
+    ```python
+    remainder = minutes % 60
+    remainder
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-45
-```
-````
+    ```text
+    45
+    ```
 
 به همین سادگی! به‌جای محاسبهٔ دستی باقی‌مانده، می‌توانیم مستقیماً از `%` استفاده کنیم.
 
@@ -110,20 +102,18 @@ remainder
 
 !!! example "Python"
 
-````
-```python
-x = 20
-y = 5
+    ```python
+    x = 20
+    y = 5
 
-x % y
-```
+    x % y
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-0
-```
-````
+    ```text
+    0
+    ```
 
 چون باقی‌مانده صفر است، می‌دانیم ۲۰ بر ۵ بخش‌پذیر است.
 
@@ -135,35 +125,31 @@ x % y
 
 !!! example "Python"
 
-````
-```python
-x = 12345
-x % 10
-```
+    ```python
+    x = 12345
+    x % 10
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-5
-```
-````
+    ```text
+    5
+    ```
 
 اگر به‌جای ۱۰ از ۱۰۰ استفاده کنیم، دو رقم آخر عدد به دست می‌آیند:
 
 !!! example "Python"
 
-````
-```python
-x = 12345
-x % 100
-```
+    ```python
+    x = 12345
+    x % 100
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-45
-```
-````
+    ```text
+    45
+    ```
 
 **۳. محاسبات ساعت (Clock Arithmetic)**
 
@@ -177,20 +163,18 @@ x % 100
 
 !!! example "Python"
 
-````
-```python
-start = 11
-duration = 3
-end = (start + duration) % 12
-end
-```
+    ```python
+    start = 11
+    duration = 3
+    end = (start + duration) % 12
+    end
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-2
-```
-````
+    ```text
+    2
+    ```
 
 پس رویداد ساعت ۲ بعدازظهر تمام می‌شود.
 
@@ -198,20 +182,18 @@ end
 
 !!! example "Python"
 
-````
-```python
-a = 25 // 10
-b = 25 % 10
+    ```python
+    a = 25 // 10
+    b = 25 % 10
 
-a, b
-```
+    a, b
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-(2, 5)
-```
-````
+    ```text
+    (2, 5)
+    ```
 
 در اینجا `//` تعداد دفعاتی را مشخص می‌کند که ۱۰ به‌طور کامل در ۲۵ جا می‌شود و `%` باقی‌مانده را به ما می‌دهد.
 
@@ -223,33 +205,29 @@ a, b
 
 !!! example "Python"
 
-````
-```python
-5 == 5
-```
+    ```python
+    5 == 5
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 و اگر دو مقدار برابر نباشند:
 
 !!! example "Python"
 
-````
-```python
-5 == 7
-```
+    ```python
+    5 == 7
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 ### تفاوت `=` و `==`
 
@@ -266,20 +244,18 @@ False
 
 !!! example "Python"
 
-````
-```python
-x = 5
-y = 7
+    ```python
+    x = 5
+    y = 7
 
-x == y
-```
+    x == y
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 در اینجا ابتدا مقدارهای ۵ و ۷ را به متغیرهای `x` و `y` اختصاص داده‌ایم و سپس با `==` بررسی کرده‌ایم که آیا این دو مقدار برابر هستند یا خیر.
 
@@ -293,27 +269,25 @@ False
 
 !!! example "Python"
 
-````
-```python
-type(True)
-```
+    ```python
+    type(True)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-bool
-```
+    ```text
+    bool
+    ```
 
-```python
-type(False)
-```
+    ```python
+    type(False)
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-bool
-```
-````
+    ```text
+    bool
+    ```
 
 ### عملگرهای رابطه‌ای (Relational Operators)
 
@@ -334,84 +308,74 @@ bool
 
 !!! example "Python"
 
-````
-```python
-x = 5
-y = 7
+    ```python
+    x = 5
+    y = 7
 
-x != y
-```
+    x != y
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 چون ۵ با ۷ برابر نیست، نتیجه `True` است.
 
 !!! example "Python"
 
-````
-```python
-x > y
-```
+    ```python
+    x > y
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 چون ۵ بزرگ‌تر از ۷ نیست.
 
 !!! example "Python"
 
-````
-```python
-x < y
-```
+    ```python
+    x < y
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 چون ۵ کوچک‌تر از ۷ است.
 
 !!! example "Python"
 
-````
-```python
-x >= y
-```
+    ```python
+    x >= y
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-False
-```
-````
+    ```text
+    False
+    ```
 
 چون ۵ نه بزرگ‌تر از ۷ است و نه با آن برابر.
 
 !!! example "Python"
 
-````
-```python
-x <= y
-```
+    ```python
+    x <= y
+    ```
 
-**Output:**
+    **Output:**
 
-```text
-True
-```
-````
+    ```text
+    True
+    ```
 
 چون ۵ کوچک‌تر از ۷ است.
 
